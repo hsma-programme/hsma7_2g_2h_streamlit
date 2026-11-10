@@ -9,8 +9,8 @@
   background: url("images/banner_hq.png") center / cover no-repeat;
 }
 
-/* Grey panel covering the full slide*/
-.reveal .slides > section {
+/* Grey panel covering the full slide */
+.reveal .slides section.slide {
   background: rgba(56, 56, 56, 0.8);
   /* Round the corners */
   border-radius: 12px;
@@ -23,7 +23,7 @@
 }
 
 /* Centre ordinary slide content in the space BELOW the heading */
-.reveal .slides > section.present:not(#title-slide) {
+.reveal .slides section.slide.present:not(#title-slide) {
   display: flex !important;
   flex-direction: column;
   justify-content: center;
@@ -31,18 +31,23 @@
   text-align: center;
 }
 
+/* Let column layouts use the full slide width */
+.reveal .slides section.slide > .columns {
+  width: 100%;
+}
+
 /* Only reserve title space when the heading is not empty */
-.reveal .slides > section.present:not(#title-slide):has(> h2:not(:empty)) {
+.reveal .slides section.slide.present:not(#title-slide):has(> h2:not(:empty)) {
   padding-top: 140px;
 }
 
 /* Hide empty headings */
-.reveal .slides > section:not(#title-slide) > h2:empty {
+.reveal .slides section.slide:not(#title-slide) > h2:empty {
   display: none;
 }
 
 /* Keep headings in a consistent position */
-.reveal .slides > section:not(#title-slide) > h2 {
+.reveal .slides section.slide:not(#title-slide) > h2 {
   position: absolute;
   top: 40px;
   left: 40px;
