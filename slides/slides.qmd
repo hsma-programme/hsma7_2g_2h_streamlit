@@ -354,24 +354,14 @@ App:
 
 ## Other Streamlit text
 
+Dedicated commands for different text styles, or `st.write()` for general-purpose output.
+
 :::: {.columns}
 
 ::: {.column width="50%"}
 
 ```{.python}
-import streamlit as st
-
-st.markdown("Text with **markdown**")
-
-st.text("Text **without markdown**")
-
-st.write("Text")
-
-st.badge("Badge")
-
-st.caption("Caption")
-
-st.code("Code")
+{{< include code/fundamentals/text.py >}}
 ```
 
 :::
@@ -379,17 +369,7 @@ st.code("Code")
 ::: {.column width="50%"}
 
 ```{stlite-python}
-import streamlit as st
-
-st.text("Text")
-
-st.write("Text")
-
-st.badge("Badge")
-
-st.caption("Caption")
-
-st.code("Code")
+{{< include code/fundamentals/text.py >}}
 ```
 
 :::
@@ -399,102 +379,148 @@ st.code("Code")
 
 
 
-## Numeric inputs
+## Widgets: `st.radio`
 
-TODO: explain `label`, `min_value`, `max_value`, `value`, `step`.
+Widgets are interactive controls that let users provide input.
 
-Maybe by demonstraitng what happens if change it? or maybe that's overkill.
+For example, `st.radio` lets users choose one option from a list.
 
-Use a slider to drag a value or a number input to enter one
+Set the prompt with `label`, the choices with `options`, and the starting position with `index` (`0` selects the first option).
+
+:::: {.columns}
+
+::: {.column width="50%"}
 
 ```{.python}
-import streamlit as st
-
-st.slider(
-    label="Pick a number", 
-    min_value=0,
-    max_value=10,
-    value=2,
-    step=1
-)
-
-st.number_input(
-    label="Pick a number",
-    min_value=0,
-    max_value=10,
-    value=2,
-    step=1
-)
+{{< include code/fundamentals/radio.py >}}
 ```
+
+:::
+
+::: {.column width="50%"}
 
 ```{stlite-python}
-import streamlit as st
-
-st.slider(
-    label="Pick a number", 
-    min_value=0,
-    max_value=10,
-    value=2,
-    step=1
-)
-
-st.number_input(
-    label="Pick a number",
-    min_value=0,
-    max_value=10,
-    value=2,
-    step=1
-)
+{{< include code/fundamentals/radio.py >}}
 ```
+
+:::
+
+::::
+
+
+
+
+## Widgets: `st.pills` and `st.segmented_control`
+
+These display the choices as buttons rather than a radio list.
+
+Use `label` and `options` as before, but set the starting choice with `default` (e.g., `"A"`) rather than its position.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{.python}
+{{< include code/fundamentals/pills.py >}}
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{stlite-python}
+{{< include code/fundamentals/pills.py >}}
+```
+
+:::
+
+::::
+
+
+
+## Widgets: `st.slider` and `st.numeric_input`
+
+Drag a slider or type a number to set a numeric value.
+
+Set the prompt with `label`, the limits with `min_value` and `max_value`, the starting value with `value`, and the increment with `step`.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{.python}
+{{< include code/fundamentals/numeric.py >}}
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{stlite-python}
+{{< include code/fundamentals/numeric.py >}}
+```
+
+:::
+
+::::
 
 
 
 
 ## Accessing the chosen value
 
-There are two ways... assign to variable, or add to session_state
+Access the chosen value through a variable or `st.session_state`.
 
-Assign to variable first:
+<br>
+
+To assign the widget's return value to a variable:
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{.python code-line-numbers="3,11"}
+{{< include code/fundamentals/assign.py >}}
+```
+
+:::
+
+::: {.column width="40%"}
 
 ```{stlite-python}
-import streamlit as st
-
-chosen_value = st.slider(
-    label="Pick a number", 
-    min_value=0,
-    max_value=10,
-    value=2,
-    step=1
-)
-
-st.write(chosen_value)
+{{< include code/fundamentals/assign.py >}}
 ```
+
+:::
+
+::::
 
 
 
 
 ## Accessing the chosen value
 
-There are two ways... assign to variable, or add to session_state
+Alternatively, give the widget a `key` to access its value through `st.session_state`.
 
-other option, session_state. to do this, we give a key.
+:::: {.columns}
 
-can then access from session state
+::: {.column width="60%"}
+
+```{.python code-line-numbers="9,12"}
+{{< include code/fundamentals/key.py >}}
+```
+
+:::
+
+::: {.column width="40%"}
 
 ```{stlite-python}
-import streamlit as st
-
-st.slider(
-    label="Pick a number", 
-    min_value=0,
-    max_value=10,
-    value=2,
-    step=1,
-    key="chosen_value"
-)
-
-st.write(st.session_state["chosen_value"])
+{{< include code/fundamentals/key.py >}}
 ```
+
+:::
+
+::::
 
 
 
@@ -505,11 +531,17 @@ st.write(st.session_state["chosen_value"])
 
 ::: {.column width="50%"}
 
-The session state is like a dictionary of values for the current user's session. It keeps track of values. For our slider:
+Session state keeps track of values between script re-runs, like a dictionary for the current user's session.
+
+<br>
+
+For our slider with a `key`:
 
 1. The user chooses a new inter-arrival time.
-2. Streamlit updates the widget's value in session state.
-3. The script reruns, so we can read and use the updated value.
+
+2. Streamlit updates the value in `st.session_state`.
+
+3. The script reruns, reading and using the updated value.
 
 :::
 
@@ -524,9 +556,7 @@ The session state is like a dictionary of values for the current user's session.
 
 
 
-## TODO: SECTION SLIDE
-
-Let's build a streamlit app for our DES model
+# Let's build a streamlit app for our DES model
 
 
 
@@ -545,52 +575,9 @@ We'll use the DES model from session 2C. As a reminder:
 
 ## Before we build the app...
 
-Remove the `print()` statements from the end of the file.
+This app will help decision-makers explore staffing options, considering both patient waiting times and staffing costs.
 
-```{.python code-overflow="scroll"}
-# REMOVE ALL OF THIS...
-
-base_case_params = Param()
-base_case_trial = Trial(base_case_params)
-base_case_trial.run_trial()
-base_case_trial.calculate_trial_results()
-print ("BASE CASE TRIAL RESULTS")
-print ("-----------------------")
-print ("Queuing Time for the Nurse")
-print (f"Mean : {base_case_trial.trial_mean_q_time_nurse:.2f} minutes")
-print (f"SD : {base_case_trial.trial_sd_q_time_nurse:.2f} minutes")
-print (f"90th Perc : {base_case_trial.trial_perc_90_q_time_nurse:.2f} minutes")
-print (f"Standard Error : {base_case_trial.se_q_time_nurse:.2f}")
-print (
-    f"95% CI : ({base_case_trial.ci_lower_q_time_nurse:.2f}, ",
-    f"{base_case_trial.ci_upper_q_time_nurse:.2f}) minutes"
-)
-print ()
-
-what_if_params = Param(num_nurses=2)
-what_if_trial = Trial(what_if_params)
-what_if_trial.run_trial()
-what_if_trial.calculate_trial_results()
-print ("2 NURSES TRIAL RESULTS")
-print ("----------------------")
-print ("Queuing Time for the Nurse")
-print (f"Mean : {what_if_trial.trial_mean_q_time_nurse:.2f} minutes")
-print (f"SD : {what_if_trial.trial_sd_q_time_nurse:.2f} minutes")
-print (f"90th Perc : {what_if_trial.trial_perc_90_q_time_nurse:.2f} minutes")
-print (f"Standard Error : {what_if_trial.se_q_time_nurse:.2f}")
-print (
-    f"95% CI : ({what_if_trial.ci_lower_q_time_nurse:.2f}, ",
-    f"{what_if_trial.ci_upper_q_time_nurse:.2f}) minutes"
-)
-print ()
-```
-
-
-
-
-## Before we build the app...
-
-Add a calculation for the cost of nurse time.
+Let’s add an hourly cost per nurse.
 
 ```{.python code-line-numbers="10,18"}
 class Param:
@@ -618,7 +605,9 @@ class Param:
 
 ## Before we build the app...
 
-Add a calculation for the cost of nurse time.
+Calculate the total staffing cost from the number of nurses, the simulation duration and the hourly rate.
+
+This lets us compare the cost of each staffing option alongside its effect on waiting times.
 
 ```{.python code-line-numbers="9-14"}
         self.ci_lower_q_time_nurse = self.trial_mean_q_time_nurse - (
@@ -640,9 +629,9 @@ Add a calculation for the cost of nurse time.
 
 
 
-## Our updated model
+## Updated model with nurse costs
 
-```{.python code-overflow="scroll"}
+```{.python code-overflow="scroll" code-line-numbers="32,40,149-155"}
 {{< include ../app/model.py >}}
 ```
 
@@ -651,21 +640,28 @@ Add a calculation for the cost of nurse time.
 
 ## Streamlit app
 
-We'll start with a simple app. this is our steps...
+We'll build a simple app in four steps:
 
-1. Create the app script
-2. Get inputs from the user.
-3. Run the model using those inputs.
-4. Show the results.
+1. Create the app **script**.
+
+2. Get **inputs** from the user.
+
+3. **Run** the model using those inputs.
+
+4. **Display** the results.
 
 
 
 
-## 1. Create the app script
+## Create the app script
 
-Create a file called `app.py` in the same folder as `model.py`.
+:::: {.columns}
 
-Add these imports:
+::: {.column width="50%"}
+
+Create `app.py` in the same folder as `model.py`.
+
+It should contain these imports:
 
 ```{.python}
 import plotly.express as px
@@ -674,106 +670,247 @@ import streamlit as st
 from model import Param, Trial
 ```
 
-We'll use:
+* `plotly.express`: chart the results.
+* `streamlit`: build the interface.
+* `Param` and `Trial`: configure and run the model. Here, `model` refers to `model.py` in the same folder. The import makes `Param` and `Trial` available in our app.
 
-* `streamlit` to build the interface.
-* `Param` and `Trial` to configure and run our model.
-* `plotly.express` to create charts of the results.
+:::
 
-<!-- TODO: explain relative imports? -->
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="40%"}
+
+::: {.fragment}
+
+> **Why two Python files?**
+>
+> * Run and test the model independently of the app.
+> * Avoid redefining model classes each time Streamlit reruns.
+
+:::
+
+:::
+
+::::
 
 
 
 
-## TODO: SECTION SLIDE
+## Get inputs from the user
 
-2. Get inputs from the user
+**Which model parameters should users be able to change?**  
+For this app, we'll include all everything in `Param`.
 
 
+:::: {.columns}
 
+::: {.column width="50%"}
 
-## What can users change?
+```{.python}
+{{< include code/simple/param.py >}}
+```
 
-should all be in `Param`
-show `Param`
+:::
+
+::: {.column width="50%"}
 
 * Mean time between arrivals
-* Mean and SD for consultation length
+* Mean and SD of consultation time
 * Number of nurses
-* Hourly nurse cost
-* Length of simulation
+* Simulation duration
 * Number of replications
+* Hourly cost per nurse
 
+:::
 
-We have the following things we need to get...
-
-* inter-arrival time
-* etc.
+::::
 
 
 
 
 ## Inputs: inter-arrival time
 
-As a reminder:
+We'll use our original default (`5`), then choose some suitable limits and a step size.
+
+
+:::: {.columns}
+
+::: {.column width="55%"}
 
 ```{.python}
-class Param:
-    def __init__(
-        self,
-        mean_patient_inter=5,
+{{< include code/simple/input_iat.py >}}
 ```
 
-So we set default 5. We choose min max step. Set key so can feed to Param later.
+:::
 
-```{.python}
-st.slider(
-    label="Mean patient inter-arrival time (minutes)", # <1>
-    min_value=3.0, # <2>
-    max_value=7.0, # <3>
-    value=5.0, # <4>
-    step=0.25, # <5>
-    key="mean_patient_inter", # <6>
-)
-```
-
-App:
+::: {.column width="45%"}
 
 ```{stlite-python}
 import streamlit as st
 
-st.slider(
-    label="Mean patient inter-arrival time (minutes)",
-    min_value=3.0,
-    max_value=7.0,
-    value=5.0,
-    step=0.25,
-    key="mean_patient_inter",
-)
+{{< include code/simple/input_iat.py >}}
 ```
 
+:::
 
-
-
-## Inputs
-
-Do same for the others
-
-
-
-
-## TODO: SECTION SLIDE
-
-3. Run model using the inputs
+::::
 
 
 
 
-## Pass the inputs to `Param`
+## Inputs: Consultation time
 
-Use the selected values instead of relying on the model's defaults.
+:::: {.columns}
+
+::: {.column width="55%"}
 
 ```{.python}
+{{< include code/simple/input_consultation.py >}}
+```
+
+:::
+
+::: {.column width="45%"}
+
+```{stlite-python}
+import streamlit as st
+
+{{< include code/simple/input_consultation.py >}}
+```
+
+:::
+
+::::
+
+
+
+
+## Inputs: Number of nurses
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{.python}
+{{< include code/simple/input_nurses.py >}}
+```
+
+:::
+
+::: {.column width="45%"}
+
+```{stlite-python}
+import streamlit as st
+
+{{< include code/simple/input_nurses.py >}}
+```
+
+:::
+
+::::
+
+
+
+
+## Inputs: Hourly cost
+
+All widgets have a `help` parameter.
+
+We can use it here to explain what the hourly cost should include.
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{.python}
+{{< include code/simple/input_cost.py >}}
+```
+
+:::
+
+::: {.column width="45%"}
+
+```{stlite-python}
+import streamlit as st
+
+{{< include code/simple/input_cost.py >}}
+```
+
+:::
+
+::::
+
+
+
+
+## Inputs: Simulation
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{.python}
+{{< include code/simple/input_sim.py >}}
+```
+
+:::
+
+::: {.column width="45%"}
+
+```{stlite-python}
+import streamlit as st
+
+{{< include code/simple/input_sim.py >}}
+```
+
+:::
+
+::::
+
+
+
+
+## Complete set of user inputs for the app
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{.python}
+{{< include code/simple/inputs.py >}}
+```
+
+:::
+
+::: {.column width="45%"}
+
+::: {style="height: 550px;"}
+
+```{stlite-python}
+import streamlit as st
+
+{{< include code/simple/inputs.py >}}
+```
+
+:::
+
+:::
+
+::::
+
+
+
+
+## Run model using the inputs
+
+Now we want to run the model in our app, using the selected values instead of relying on the model's defaults.
+
+```{.python}
+{{< include code/simple/run.py >}}
 ```
 
 
