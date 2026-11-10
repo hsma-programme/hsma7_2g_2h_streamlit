@@ -248,40 +248,35 @@ TODO
 
 Let's start with text: a title, a header and a subheader.
 
-On the left is the `app.py` script. On the right is the app it creates.
-
 :::: {.columns}
 
 ::: {.column width="50%"}
 
+`app.py`:
+
 ```{.python}
-import streamlit as st
-
-st.title("This is a title")
-
-st.header("This is a header")
-
-st.subheader("This is a subheader")
+{{< include code/fundamentals/headings.py >}}
 ```
 
 :::
 
 ::: {.column width="50%"}
 
+App:
+
 ```{stlite-python}
-import streamlit as st
-
-st.title("This is a title")
-
-st.header("This is a header")
-
-st.subheader("This is a subheader")
+{{< include code/fundamentals/headings.py >}}
 ```
 
 :::
 
 ::::
 
+
+
+
+## Other Streamlit text
+
 :::: {.columns}
 
 ::: {.column width="50%"}
@@ -289,15 +284,9 @@ st.subheader("This is a subheader")
 ```{.python}
 import streamlit as st
 
-st.title("Title")
+st.markdown("Text with **markdown**")
 
-st.header("Header")
-
-st.subheader("Subheader")
-
-st.markdown("Text")
-
-st.text("Text")
+st.text("Text **without markdown**")
 
 st.write("Text")
 
@@ -314,14 +303,6 @@ st.code("Code")
 
 ```{stlite-python}
 import streamlit as st
-
-st.title("Title")
-
-st.header("Header")
-
-st.subheader("Subheader")
-
-st.markdown("Text")
 
 st.text("Text")
 
