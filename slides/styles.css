@@ -38,7 +38,7 @@
 
 /* Only reserve title space when the heading is not empty */
 .reveal .slides section.slide.present:not(#title-slide):has(> h2:not(:empty)) {
-  padding-top: 140px;
+  padding-top: 110px;
 }
 
 /* Hide empty headings */
