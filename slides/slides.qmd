@@ -61,7 +61,8 @@ Session 2G: Creating a DES interface with Streamlit - Part 1
 <br><br><br>
 
 <iframe
-  src="https://www.youtube.com/embed/AExH1e6SvZA?autoplay=1&mute=1&controls=0&loop=1&playlist=AExH1e6SvZA"
+  data-src="https://www.youtube.com/embed/AExH1e6SvZA?autoplay=1&mute=1&controls=0&loop=1&playlist=AExH1e6SvZA&enablejsapi=1"
+  data-autoplay
   style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0;"
   allow="autoplay; encrypted-media; fullscreen"
   allowfullscreen>
