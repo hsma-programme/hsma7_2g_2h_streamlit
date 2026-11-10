@@ -114,3 +114,14 @@
 .reveal .slides section.showcase figure > p {
   margin: 0;
 }
+
+/* ---------------------------------------------------------------------- */
+/* Countdown
+/* ---------------------------------------------------------------------- */
+
+.hsma-countdown {
+  font-family: "HSMA Display", "Lexend", sans-serif;
+  font-size: 96px;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6));
+  cursor: pointer;
+}

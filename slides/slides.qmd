@@ -5,6 +5,7 @@ format:
     theme: dark
     code-annotations: hover
     css: styles.css
+    include-after-body: resources/countdown.html
     logo: images/hsma_logo.png
     center: false
     auto-stretch: false
@@ -14,13 +15,54 @@ filters:
   - whitphx/stlite
 ---
 
-## Module 2 'I want to fix my delays, and see what works before I try it'
+##
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+<div class="hsma-countdown"></div>
+
+![](images/postmanpat.png){height=250px}
+
+::: {style="font-size: 21px; background-color: #31211d; border-radius: 16px; padding: 5px 0px;"}
+
+**Module 2 'I want to fix my delays, and see what works before I try it'**
 
 Session 2G: Creating a DES interface with Streamlit - Part 1
 
-Sammi Rosser - Presenter
+[Sammi Rosser - Presenter]{style="color: #7ac943;"}
 
-Amy Heather - Session content creator
+[Amy Heather - Session content creator]{style="color: #7ac943;"}
+
+[**We are DEStined for app development**]{style="color: #ffe600;"}
+
+:::
+
+:::
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="35%"}
+
+![](images/nihr_logo_trimmed.png){width=300px}
+
+![](images/hsma_logo.png){width=200px}
+
+<br><br><br>
+
+<iframe
+  src="https://www.youtube.com/embed/AExH1e6SvZA?autoplay=1&mute=1&controls=0&loop=1&playlist=AExH1e6SvZA"
+  style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0;"
+  allow="autoplay; encrypted-media; fullscreen"
+  allowfullscreen>
+</iframe>
+
+:::
+
+::::
 
 {{< include _section_intro.qmd >}}
 
