@@ -17,6 +17,13 @@ filters:
 
 ##
 
+<audio
+  controls
+  data-autoplay
+  preload="auto"
+  src="https://github.com/hsma-programme/hsma_assets/raw/refs/heads/main/h6_theme.mp3">
+</audio>
+
 :::: {.columns}
 
 ::: {.column width="55%"}
