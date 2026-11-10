@@ -1,0 +1,16 @@
+## DAY TWO AFTERNOON : SECTION 6 CUSTOMISING APP APPEARANCE
+
+theme
+
+css
+
+logo
+
+etc.
+
+
+
+
+## exercise
+
+customise appearance of your app
