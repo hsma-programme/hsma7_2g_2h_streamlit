@@ -24,6 +24,9 @@ filters:
 
 Now it's time to share results of the model.
 
+
+
+
 ## Let's share the model
 
 :::: {.columns}
@@ -50,6 +53,9 @@ But they might not...
 
 ::::
 
+
+
+
 ## Actually, let's send a report
 
 :::: {.columns}
@@ -73,6 +79,9 @@ Job done. Surely.
 :::
 
 ::::
+
+
+
 
 ## You get a few questions back...
 
@@ -106,9 +115,15 @@ But what if they could try it themselves?
 
 ::::
 
+
+
+
 ##
 
 ![](gif/you-get-a-website.gif){height=500px}
+
+
+
 
 ## Enter Streamlit
 
@@ -122,17 +137,21 @@ We can give our DES model an interface so people can:
 
 ![](images/streamlit_logo.png)
 
+
+
 ## DES app showcase: acute medical unit {.showcase}
 
 <https://amumodelling-hsma.streamlit.app/>
+
+::: {.r-stack}
 
 ![](images/example_amu.png){height=570px}
 
-## DES app showcase: acute medical unit {.showcase}
+![](images/example_amu_charts.png){.fragment height=570px}
 
-<https://amumodelling-hsma.streamlit.app/>
+:::
 
-![](images/example_amu_charts.png){height=570px}
+
 
 ## DES app showcase: elective surgery{.showcase visibility="hidden"}
 
@@ -140,47 +159,55 @@ TODO: Not currently working
 
 <https://gstt-hands-waitlist.streamlit.app/>
 
+
+
+
 ## DES app showcase: stroke ward {.showcase}
 
 <https://stroke-model-des.streamlit.app/>
+
+::: {.r-stack}
 
 ![](images/example_stroke.png){height=570px}
 
-## DES app showcase: stroke ward {.showcase}
+![](images/example_stroke_metrics.png){.fragment height=570px}
 
-<https://stroke-model-des.streamlit.app/>
+![](images/example_stroke_charts.png){.fragment height=570px}
 
-![](images/example_stroke_metrics.png){height=570px}
+:::
 
-## DES app showcase: stroke ward {.showcase}
 
-<https://stroke-model-des.streamlit.app/>
 
-![](images/example_stroke_charts.png){height=570px}
 
 ## DES app showcase: non-elective flow {.showcase}
 
 <https://non-elective-flow-simulation-model-club.streamlit.app/>
+
+::: {.r-stack}
 
 ![](images/example_nonel.png){height=570px}
 
-## DES app showcase: non-elective flow {.showcase}
+![](images/example_nonel_compare.png){.fragment height=570px}
 
-<https://non-elective-flow-simulation-model-club.streamlit.app/>
+:::
 
-![](images/example_nonel_compare.png){height=570px}
+
+
 
 ## DES app showcase: urgent treatment centre {.showcase}
 
 <https://stars-simpy-example.streamlit.app/>
+
+::: {.r-stack}
 
 ![](images/example_urgent.png){height=570px}
 
-## DES app showcase: urgent treatment centre {.showcase}
+![](images/example_urgent_plot.png){.fragment height=570px}
 
-<https://stars-simpy-example.streamlit.app/>
+:::
 
-![](images/example_urgent_plot.png){height=570px}
+
+
 
 ## DES app showcase: DES playground {.showcase}
 
@@ -188,29 +215,92 @@ TODO: Not currently working
 
 ![](images/example_playground.png){height=570px}
 
+
+
+
 ## DES app showcase: vidigi examples {.showcase visibility="hidden"}
 
 TODO
 
 <https://simpy-visualisation.streamlit.app/>
 
-## TODO: SECTION SLIDE
 
-Introduction to streamlit
 
-## Introduction to streamlit
 
-Streamlit is a python package.
+# Getting started with streamlit
 
-You make a python script (e.g., `app.py`).
 
-`import streamlit as st` at the top.
 
-To run it you do from terminal:
 
-`streamlit run app.py`
 
-## Text
+## How to create and run a Streamlit app
+
+1. Install Streamlit.
+
+   ```bash
+   pip install streamlit
+   ```
+
+<div style="height: 10px;"></div>
+
+2. Create a Python script (e.g., `app.py`).
+
+<div style="height: 10px;"></div>
+
+3. Import Streamlit at the top of your script:
+
+   ```python
+   import streamlit as st
+   ```
+
+<div style="height: 10px;"></div>
+
+4. Run your app from the terminal:
+
+   ```bash
+   streamlit run app.py
+   ```
+
+
+
+
+## What can we put in a Streamlit app?
+
+Let's start with text: a title, a header and a subheader.
+
+On the left is the `app.py` script. On the right is the app it creates.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{.python}
+import streamlit as st
+
+st.title("This is a title")
+
+st.header("This is a header")
+
+st.subheader("This is a subheader")
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{stlite-python}
+import streamlit as st
+
+st.title("This is a title")
+
+st.header("This is a header")
+
+st.subheader("This is a subheader")
+```
+
+:::
+
+::::
 
 :::: {.columns}
 
@@ -267,6 +357,9 @@ st.code("Code")
 :::
 
 ::::
+
+
+
 
 ## Numeric inputs
 
@@ -316,6 +409,9 @@ st.number_input(
 )
 ```
 
+
+
+
 ## Accessing the chosen value
 
 There are two ways... assign to variable, or add to session_state
@@ -335,6 +431,9 @@ chosen_value = st.slider(
 
 st.write(chosen_value)
 ```
+
+
+
 
 ## Accessing the chosen value
 
@@ -359,7 +458,10 @@ st.slider(
 st.write(st.session_state["chosen_value"])
 ```
 
-## Sesssion state
+
+
+
+## Session state
 
 :::: {.columns}
 
@@ -381,9 +483,15 @@ The session state is like a dictionary of values for the current user's session.
 
 ::::
 
+
+
+
 ## TODO: SECTION SLIDE
 
 Let's build a streamlit app for our DES model
+
+
+
 
 ## Let's build a streamlit app!
 
@@ -393,6 +501,9 @@ We'll use the DES model from session 2C. As a reminder:
 * It simulates a simple nurse clinic.
 
 ![](images/model_diagram.drawio.png)
+
+
+
 
 ## Before we build the app...
 
@@ -436,6 +547,9 @@ print (
 print ()
 ```
 
+
+
+
 ## Before we build the app...
 
 Add a calculation for the cost of nurse time.
@@ -461,6 +575,9 @@ class Param:
         self.nurse_cost_per_hour = nurse_cost_per_hour
 ```
 
+
+
+
 ## Before we build the app...
 
 Add a calculation for the cost of nurse time.
@@ -482,11 +599,17 @@ Add a calculation for the cost of nurse time.
         )
 ```
 
+
+
+
 ## Our updated model
 
 ```{.python code-overflow="scroll"}
 {{< include ../app/model.py >}}
 ```
+
+
+
 
 ## Streamlit app
 
@@ -496,6 +619,9 @@ We'll start with a simple app. this is our steps...
 2. Get inputs from the user.
 3. Run the model using those inputs.
 4. Show the results.
+
+
+
 
 ## 1. Create the app script
 
@@ -518,9 +644,15 @@ We'll use:
 
 <!-- TODO: explain relative imports? -->
 
+
+
+
 ## TODO: SECTION SLIDE
 
 2. Get inputs from the user
+
+
+
 
 ## What can users change?
 
@@ -539,6 +671,9 @@ We have the following things we need to get...
 
 * inter-arrival time
 * etc.
+
+
+
 
 ## Inputs: inter-arrival time
 
@@ -579,13 +714,22 @@ st.slider(
 )
 ```
 
+
+
+
 ## Inputs
 
 Do same for the others
 
+
+
+
 ## TODO: SECTION SLIDE
 
 3. Run model using the inputs
+
+
+
 
 ## Pass the inputs to `Param`
 
@@ -593,6 +737,9 @@ Use the selected values instead of relying on the model's defaults.
 
 ```{.python}
 ```
+
+
+
 
 ## When should the model run?
 
@@ -602,12 +749,18 @@ But we do not want to rerun the **simulation** every time someone adjusts a slid
 
 Let users choose their inputs, then click **Run simulation**.
 
+
+
+
 ## Add a run button
 
 When click button, returns true on rerun
 so will rerun through script
 this time true 
 so will do the indented stuff
+
+
+
 
 ## 4. displaying results
 
@@ -620,6 +773,9 @@ copy
 We can display similar message in our app
 
 this is inside the button too
+
+
+
 
 ## print summary stats
 
@@ -637,6 +793,9 @@ st.write(f"""
     """)
 ```
 
+
+
+
 ## charts
 
 can also make charts
@@ -650,6 +809,9 @@ if using plotly, you make like normal then use st.plotly_chart()
     )
     fig.update_layout(yaxis_title="Number of replications")
     st.plotly_chart(fig)
+
+
+
 
 ## dataframes
 
@@ -667,13 +829,22 @@ can also show dataframes. interactive with st.dataframe() or static with st.tabl
             ]
         )
 
+
+
+
 ## Bringing it all together
 
 Show full app
 
+
+
+
 ## Bringing it all together
 
 add some titles and headers
+
+
+
 
 ## st.container
 
@@ -685,17 +856,26 @@ visible border
 
 Indent everything that belongs **inside** the container.
 
+
+
+
 ## st.expander
 
 hide optional detail
 
 actually, maybe hide that dataframe lets use st.expander().
 
+
+
+
 ## st.space
 
 use st.space() to help space it out better
 
 can customise size="..."
+
+
+
 
 ## Exercise
 
@@ -721,6 +901,9 @@ then running the model
 
 then showing analysis
 
+
+
+
 ## SECTION 2 MULTIPAGE APP
 
 that was simple single page app
@@ -729,17 +912,29 @@ now were going to make a multipage app
 
 going to have a home page, when first open app, introduce model, authors, etc.
 
+
+
+
 ## exercise
 
 add a homepage to the app you just made
+
+
+
 
 ## DAY ONE : SECTION 3 HOSTING ON COMMUNITY CLOUD
 
 streamlit community cloud
 
+
+
+
 ## exercise
 
 deploy your app on community cloud
+
+
+
 
 ## DAY TWO MORNING : SECTION 4 SCENARIOS
 
@@ -755,9 +950,15 @@ one that runs scenarios
 
 one that can look at results of a scenario or compare them
 
+
+
+
 ## split
 
 show splitting the two
+
+
+
 
 ## run and save scenarios
 
@@ -765,10 +966,16 @@ save how? session state
 
 can do a success message, it saved yay
 
+
+
+
 ## show scenarios
 
 help user keep track
 show scenarios table
+
+
+
 
 ## results
 
@@ -778,6 +985,9 @@ single scenario or compare
 
 st.tabs
 
+
+
+
 ## single scenario results
 
 its same results code as before
@@ -785,47 +995,77 @@ just need to choose from scenarios
 let user choose
 can use a dropdown
 
+
+
+
 ## single scenario results
 
 can remind of scenarios again with dataframe
 can use pd.styler to highlight which they chose
+
+
+
 
 ## compare scenarios
 
 need to run at least two
 do message for that
 
+
+
+
 ## choose which to compare
 
 choose which scenarios to compare
 can use multiselect
 
+
+
+
 ## show chosen
 
 can do the table again with pd.styler
+
+
+
 
 ## comparison figure
 
 good for comparison is often boxplot
 here also showing individual rep on boxplot
 
+
+
+
 ## comparison table
 
 could also compare those summary stats in a table
 and the staffing costs
+
+
+
 
 ## exercise
 
 change app from yesterday from singlepage to multipage
 with scenario comparison
 
+
+
+
 ## DAY TWO MORNING/AFTERNOON : SECTION 5 HOSTING WITH ST LITE
 
 st lite
 
+
+
+
 ## exercise
 
 host your app with stlite
+
+
+
 
 ## DAY TWO AFTERNOON : SECTION 6 CUSTOMISING APP APPEARANCE
 
@@ -836,6 +1076,9 @@ css
 logo
 
 etc.
+
+
+
 
 ## exercise
 
