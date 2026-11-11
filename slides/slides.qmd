@@ -1,19 +1,9 @@
 ---
-title: "![](images/hsma_logo_tall_tagline_trimmed.png){width=500px}"
 format:
   revealjs:
-    pagetitle: "HSMA Session"
-    output-file: index.html
-    theme: dark
-    code-annotations: hover
-    embed-resources: false
     css: styles.css
-    include-after-body: resources/countdown.html
-    logo: images/hsma_logo.png
-    center: false
-    auto-stretch: false
-    width: 1280
-    height: 720
+metadata-files:
+  - template/slides.yml
 filters:
   - whitphx/stlite
 ---
@@ -57,9 +47,9 @@ Session 2G: Creating a DES interface with Streamlit - Part 1
 
 ::: {.column width="35%"}
 
-![](images/nihr_logo_trimmed.png){width=300px}
+![](template/nihr_logo_trimmed.png){width=300px}
 
-![](images/hsma_logo.png){width=200px}
+![](template/hsma_logo.png){width=200px}
 
 <br><br><br>
 
@@ -196,6 +186,16 @@ We can give our DES model an interface so people can:
 * Explore charts and results
 
 ![](images/streamlit_logo.png)
+
+
+
+
+## Other web app tools
+
+TODO
+
+![](images/star-history-apps.png){height=450px}
+
 
 
 
@@ -634,8 +634,8 @@ This lets us compare the cost of each staffing option alongside its effect on wa
 
 ## Updated model with nurse costs
 
-```{.python code-overflow="scroll" code-line-numbers="32,40,149-155"}
-{{< include ../app/model.py >}}
+```{.python code-overflow="scroll" code-line-numbers="29,37,146-152"}
+{{< include code/model.py >}}
 ```
 
 
