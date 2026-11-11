@@ -7,7 +7,6 @@ format:
     theme: dark
     code-annotations: hover
     embed-resources: false
-    view-distance: 3  # Only load slides near the current one
     css: styles.css
     include-after-body: resources/countdown.html
     logo: images/hsma_logo.png
@@ -1192,16 +1191,24 @@ TODO: Explain what it is
 
 3. Enter details for the app you want to deploy.
 
-![](images/cloud_details.png)
+![](images/cloud_details.png){height=450px}
+
+
+
+
+
+## Deploying on Community Cloud
+
+TODO
 
 
 
 
 ## Exercise
 
-add a homepage to the app you just made
+**Task 1:** Add a homepage to the app you created in the last exercise.
 
-deploy your app on community cloud
+**Task 2:** Deploy your app on Streamlit Community Cloud.
 
 
 
