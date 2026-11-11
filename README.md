@@ -1,4 +1,4 @@
-# HSMA7 Modules 2G & 2H: Creating a DES interface with Streamlit
+# HSMA-7 Module 2G: Creating a DES interface with Streamlit - Part 1
 
 ```
 mamba env create --file environments/app.yml
