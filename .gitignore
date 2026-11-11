@@ -221,5 +221,7 @@ __marimo__/
 
 slides.html
 slides_files/
+index.html
+index_files/
 .quarto
 *.quarto_ipynb*
