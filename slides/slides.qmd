@@ -1,19 +1,9 @@
 ---
-title: "![](images/hsma_logo_tall_tagline_trimmed.png){width=500px}"
 format:
   revealjs:
-    pagetitle: "HSMA Session"
-    output-file: index.html
-    theme: dark
-    code-annotations: hover
-    embed-resources: false
     css: styles.css
-    include-after-body: resources/countdown.html
-    logo: images/hsma_logo.png
-    center: false
-    auto-stretch: false
-    width: 1280
-    height: 720
+metadata-files:
+  - template/slides.yml
 filters:
   - whitphx/stlite
 ---
@@ -57,9 +47,9 @@ Session 2G: Creating a DES interface with Streamlit - Part 1
 
 ::: {.column width="35%"}
 
-![](images/nihr_logo_trimmed.png){width=300px}
+![](template/nihr_logo_trimmed.png){width=300px}
 
-![](images/hsma_logo.png){width=200px}
+![](template/hsma_logo.png){width=200px}
 
 <br><br><br>
 
@@ -196,6 +186,16 @@ We can give our DES model an interface so people can:
 * Explore charts and results
 
 ![](images/streamlit_logo.png)
+
+
+
+
+## Other web app tools
+
+TODO
+
+![](images/star-history-apps.png){height=450px}
+
 
 
 
@@ -634,8 +634,8 @@ This lets us compare the cost of each staffing option alongside its effect on wa
 
 ## Updated model with nurse costs
 
-```{.python code-overflow="scroll" code-line-numbers="32,40,149-155"}
-{{< include ../app/model.py >}}
+```{.python code-overflow="scroll" code-line-numbers="29,37,146-152"}
+{{< include code/model.py >}}
 ```
 
 
@@ -1209,157 +1209,3 @@ TODO
 **Task 1:** Add a homepage to the app you created in the last exercise.
 
 **Task 2:** Deploy your app on Streamlit Community Cloud.
-
-
-
-
-## DAY TWO MORNING : SECTION 4 SCENARIOS
-
-now going to show how to make an app that can compare scenarios
-
-need to be able to save results of a run
-
-and then compare between them
-
-to do this, we're going to split the simulation page into two
-
-one that runs scenarios
-
-one that can look at results of a scenario or compare them
-
-
-
-
-## split
-
-show splitting the two
-
-
-
-
-## run and save scenarios
-
-save how? session state
-
-can do a success message, it saved yay
-
-
-
-
-## show scenarios
-
-help user keep track
-show scenarios table
-
-
-
-
-## results
-
-results
-
-single scenario or compare
-
-st.tabs
-
-
-
-
-## single scenario results
-
-its same results code as before
-just need to choose from scenarios
-let user choose
-can use a dropdown
-
-
-
-
-## single scenario results
-
-can remind of scenarios again with dataframe
-can use pd.styler to highlight which they chose
-
-
-
-
-## compare scenarios
-
-need to run at least two
-do message for that
-
-
-
-
-## choose which to compare
-
-choose which scenarios to compare
-can use multiselect
-
-
-
-
-## show chosen
-
-can do the table again with pd.styler
-
-
-
-
-## comparison figure
-
-good for comparison is often boxplot
-here also showing individual rep on boxplot
-
-
-
-
-## comparison table
-
-could also compare those summary stats in a table
-and the staffing costs
-
-
-
-
-## exercise
-
-change app from yesterday from singlepage to multipage
-with scenario comparison
-
-
-
-
-## DAY TWO MORNING/AFTERNOON : SECTION 5 HOSTING WITH ST LITE
-
-st lite
-
-
-
-
-## exercise
-
-host your app with stlite
-
-
-
-## DAY TWO AFTERNOON : SECTION 6 CUSTOMISING APP APPEARANCE
-
-theme
-
-css
-
-logo
-
-etc.
-
-st.set_page_config
-
-st.logo
-
-
-
-
-## exercise
-
-customise appearance of your app

@@ -1,13 +1,8 @@
-"""Run and save simulation scenarios."""
+"""Simple single-page app."""
 
+import plotly.express as px
 import streamlit as st
 from model import Param, Trial
-
-# ----------------------------------------------------------------------------
-# Allow user to choose model parameters
-# ----------------------------------------------------------------------------
-
-st.title("Run simulation")
 
 with st.container(border=True):
     st.subheader("Patients")
@@ -68,11 +63,7 @@ with st.container(border=True):
         key="num_replications",
     )
 
-if st.button("Run and save scenario", type="primary"):
-    # ----------------------------------------------------------------------------
-    # Run the model
-    # ----------------------------------------------------------------------------
-
+if st.button("Run simulation", type="primary"):
     params = Param(
         mean_patient_inter=st.session_state.mean_patient_inter,
         mean_nurse_consult_time=st.session_state.mean_nurse_consult_time,
@@ -86,22 +77,7 @@ if st.button("Run and save scenario", type="primary"):
     trial.run_trial()
     trial.calculate_trial_results()
 
-    # ----------------------------------------------------------------------------
-    # Save results to session state to allow comparison between scenarios
-    # ----------------------------------------------------------------------------
-
-    scenario_name = f"Scenario {len(st.session_state.scenarios) + 1}"
-    st.session_state.scenarios[scenario_name] = {
-        "settings": {
-            "Scenario": scenario_name,
-            "Inter-arrival": st.session_state.mean_patient_inter,
-            "Consultation mean": st.session_state.mean_nurse_consult_time,
-            "Consultation SD": st.session_state.sd_nurse_consult_time,
-            "Nurses": st.session_state.num_nurses,
-            "Cost per hour": st.session_state.nurse_cost_per_hour,
-            "Duration": st.session_state.sim_duration,
-            "Replications": st.session_state.num_replications,
-        },
+    results = {
         "mean": trial.trial_mean_q_time_nurse,
         "sd": trial.trial_sd_q_time_nurse,
         "p90": trial.trial_perc_90_q_time_nurse,
@@ -112,23 +88,43 @@ if st.button("Run and save scenario", type="primary"):
         "df": trial.replication_df,
     }
 
-    # Select the newly saved scenario and show confirmation
-    st.session_state.chosen_scenario = scenario_name
-    st.success(f"""
-    {scenario_name} ran successfully and was saved for this sesssion.
+    st.space()
+    st.subheader("Scenario summary")
+    st.write(f"""
+    Summary of nurse queue times across **all** replications.
+
+    * Mean: {results["mean"]:.2f} minutes.
+    * SD: {results["sd"]:.2f} minutes.
+    * 90th Perc: {results["p90"]:.2f} minutes.
+    * Standard error: {results["se"]:.2f}
+    * 95% CI: ({results["ci_lower"]:.2f}, {results["ci_upper"]:.2f}) minutes
+    
+    Total nurse staffing cost: £{results["cost"]:,.2f}
     """)
 
-if st.session_state.scenarios:
-    st.divider()
-    st.header("Saved scenarios")
-
-    st.dataframe(
-        [scenario["settings"] for scenario in st.session_state.scenarios.values()],
-        hide_index=True,
+    st.space()
+    st.subheader("Results from individual replications")
+    st.write(
+        "The chart shows how the mean nurse queue time varies between **individual** replications."
     )
-    st.caption("Scenarios are saved for the current session only.")
 
-    st.divider()
-    st.header("Results")
-    if st.button(label="Go to results page", type="primary"):
-        st.switch_page("results.py")
+    fig = px.histogram(
+        data_frame=results["df"],
+        x="mean_q_time_nurse",
+        labels={"mean_q_time_nurse": "Mean nurse queue time"},
+    )
+    fig.update_layout(yaxis_title="Number of replications")
+    st.plotly_chart(fig)
+
+    with st.expander("View underlying data from each replication"):
+        st.dataframe(
+            results["df"][
+                [
+                    "replication_id",
+                    "patient_counter",
+                    "mean_q_time_nurse",
+                    "sd_q_time_nurse",
+                    "perc_90_q_time_nurse",
+                ]
+            ]
+        )
