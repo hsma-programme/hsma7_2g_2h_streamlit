@@ -1,0 +1,21 @@
+/* ---------------------------------------------------------------------- */
+/* Showcase slide
+/* ---------------------------------------------------------------------- */
+
+/* Tighten spacing on showcase slides */
+.reveal .slides section.showcase > p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.reveal .slides section.showcase img {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove any additional figure-wrapper spacing */
+.reveal .slides section.showcase .quarto-figure,
+.reveal .slides section.showcase figure,
+.reveal .slides section.showcase figure > p {
+  margin: 0;
+}
