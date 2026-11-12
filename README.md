@@ -49,7 +49,7 @@ streamlit run app/multipage/app.py
 
 ## Viewing the slides locally
 
-The slides environment is defined in `slides/environment.yml`. It is similar to the HSMA `des` environment, but with a few extra dependencies required for rendering the slides.
+The slides environment is defined in `slides/environment.yml`. It is similar to the HSMA `des` environment, but with a few extra dependencies required for rendering the slides. A `requirements.txt` is also provided for use by GitHub actions.
 
 ```
 mamba env create --file slides/environment.yml
