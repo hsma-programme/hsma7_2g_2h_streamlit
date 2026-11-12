@@ -965,26 +965,6 @@ We can create interactive tables with `st.dataframe()` or static tables with `st
 
 
 
-## Our app
-
-```{stlite-python}
-# stlite requires micropip and installation without dotted module names
-import micropip
-await micropip.install("plotly")
-await micropip.install("sim-tools")
-await micropip.install("simpy")
-
-import streamlit as st
-from plotly import express as px
-
-{{< include code/model.py >}}
-{{< include code/simple/inputs.py >}}
-{{< include code/simple/run_button_print_chart_df.py >}}
-```
-
-
-
-
 ## Improving layout: `st.container`
 
 :::: {.columns}
@@ -1061,22 +1041,12 @@ Set `size` to adjust the spacing. The default is `"small"`.
 
 
 
+## Our app
 
-## Our app (with new container, expander and spacing)
-
-```{stlite-python}
-# stlite requires micropip and installation without dotted module names
-import micropip
-await micropip.install("plotly")
-await micropip.install("sim-tools")
-await micropip.install("simpy")
-
-import streamlit as st
-from plotly import express as px
-
-{{< include code/model.py >}}
-{{< include code/simple/fullapp.py >}}
-```
+<iframe
+  src="https://hsma-des-simple.streamlit.app/?embed=true"
+  style="width: 100%; flex: 1; min-height: 0; border: 0;"
+></iframe>
 
 
 
@@ -1157,7 +1127,12 @@ Now let's turn it into a multipage app by adding a homepage. This should:
 
 ## Our app
 
-TODO
+<iframe
+  src="https://hsma-des-multipage.streamlit.app/?embed=true"
+  style="width: 100%; flex: 1; min-height: 0; border: 0;"
+></iframe>
+
+
 
 
 # Deploying your app on Streamlit Community Cloud
@@ -1200,6 +1175,8 @@ TODO: Explain what it is
 ## Deploying on Community Cloud
 
 TODO
+
+Remember env etc.
 
 
 
