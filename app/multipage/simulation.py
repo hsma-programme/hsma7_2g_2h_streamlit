@@ -101,9 +101,11 @@ if st.button("Run simulation", type="primary"):
     fig = px.histogram(
         data_frame=trial.replication_df,
         x="mean_q_time_nurse",
-        labels={"mean_q_time_nurse": "Mean nurse queue time"},
     )
-    fig.update_layout(yaxis_title="Number of replications")
+    fig.update_layout(
+        xaxis_title="Mean nurse queue time",
+        yaxis_title="Number of replications"
+    )
     st.plotly_chart(fig)
 
     with st.expander("View underlying data from each replication"):

@@ -12,26 +12,16 @@ if st.button("Run simulation", type="primary"):
     trial.run_trial()
     trial.calculate_trial_results()
 
-    results = {
-        "mean": trial.trial_mean_q_time_nurse,
-        "sd": trial.trial_sd_q_time_nurse,
-        "p90": trial.trial_perc_90_q_time_nurse,
-        "se": trial.se_q_time_nurse,
-        "ci_lower": trial.ci_lower_q_time_nurse,
-        "ci_upper": trial.ci_upper_q_time_nurse,
-        "cost": trial.total_nurse_cost,
-        "df": trial.replication_df,
-    }
-
     st.subheader("Scenario summary")
     st.write(f"""
     Summary of nurse queue times across **all** replications.
 
-    * Mean: {results["mean"]:.2f} minutes.
-    * SD: {results["sd"]:.2f} minutes.
-    * 90th Perc: {results["p90"]:.2f} minutes.
-    * Standard error: {results["se"]:.2f}
-    * 95% CI: ({results["ci_lower"]:.2f}, {results["ci_upper"]:.2f}) minutes
+    * Mean: {trial.trial_mean_q_time_nurse:.2f} minutes.
+    * SD: {trial.trial_sd_q_time_nurse:.2f} minutes.
+    * 90th Perc: {trial.trial_perc_90_q_time_nurse:.2f} minutes.
+    * Standard error: {trial.se_q_time_nurse:.2f}
+    * 95% CI: ({trial.ci_lower_q_time_nurse:.2f},
+    {trial.ci_upper_q_time_nurse:.2f}) minutes.
     
-    Total nurse staffing cost: £{results["cost"]:,.2f}
+    Total nurse staffing cost: £{trial.total_nurse_cost:,.2f}
     """)
