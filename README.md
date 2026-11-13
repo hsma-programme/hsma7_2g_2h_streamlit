@@ -27,7 +27,7 @@ The example apps are deployed with Streamlit Community Cloud and can be viewed a
 
 Activate the HSMA `des` GitHub environment. The environment file required is available in <https://github.com/hsma-chief-elf/H7_Phase_1_Artefacts>: `DES_2/environment/environment.yml`.
 
-> **Note:** A record of the packages needed is also available in this repository under `app/requirements.txt` as it is required for deployment.
+> **Note:** A record of the packages needed is also available in this repository under `app/.../requirements.txt` as it is required for deployment.
 
 ```
 mamba activate des
