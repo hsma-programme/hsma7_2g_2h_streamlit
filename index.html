@@ -471,11 +471,11 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="" aria-label="1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb8-2"><a href="" aria-label="2"></a></span>
 <span id="cb8-3"><a href="" aria-label="3"></a>st.slider(</span>
-<span id="cb8-4"><a href="" aria-label="4"></a>    label<span class="op">=</span><span class="st">"Pick a number"</span>, </span>
+<span id="cb8-4"><a href="" aria-label="4"></a>    label<span class="op">=</span><span class="st">"Pick a number"</span>,</span>
 <span id="cb8-5"><a href="" aria-label="5"></a>    min_value<span class="op">=</span><span class="dv">0</span>,</span>
 <span id="cb8-6"><a href="" aria-label="6"></a>    max_value<span class="op">=</span><span class="dv">10</span>,</span>
 <span id="cb8-7"><a href="" aria-label="7"></a>    value<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb8-8"><a href="" aria-label="8"></a>    step<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb8-8"><a href="" aria-label="8"></a>    step<span class="op">=</span><span class="dv">1</span>,</span>
 <span id="cb8-9"><a href="" aria-label="9"></a>)</span>
 <span id="cb8-10"><a href="" aria-label="10"></a></span>
 <span id="cb8-11"><a href="" aria-label="11"></a>st.number_input(</span>
@@ -483,10 +483,10 @@
 <span id="cb8-13"><a href="" aria-label="13"></a>    min_value<span class="op">=</span><span class="dv">0</span>,</span>
 <span id="cb8-14"><a href="" aria-label="14"></a>    max_value<span class="op">=</span><span class="dv">10</span>,</span>
 <span id="cb8-15"><a href="" aria-label="15"></a>    value<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb8-16"><a href="" aria-label="16"></a>    step<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb8-16"><a href="" aria-label="16"></a>    step<span class="op">=</span><span class="dv">1</span>,</span>
 <span id="cb8-17"><a href="" aria-label="17"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
-<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0A%0Ast.slider%28%0A%20%20%20%20label%3D%22Pick%20a%20number%22%2C%20%0A%20%20%20%20min_value%3D0%2C%0A%20%20%20%20max_value%3D10%2C%0A%20%20%20%20value%3D2%2C%0A%20%20%20%20step%3D1%0A%29%0A%0Ast.number_input%28%0A%20%20%20%20label%3D%22Pick%20a%20number%22%2C%0A%20%20%20%20min_value%3D0%2C%0A%20%20%20%20max_value%3D10%2C%0A%20%20%20%20value%3D2%2C%0A%20%20%20%20step%3D1%0A%29%0A
+<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0A%0Ast.slider%28%0A%20%20%20%20label%3D%22Pick%20a%20number%22%2C%0A%20%20%20%20min_value%3D0%2C%0A%20%20%20%20max_value%3D10%2C%0A%20%20%20%20value%3D2%2C%0A%20%20%20%20step%3D1%2C%0A%29%0A%0Ast.number_input%28%0A%20%20%20%20label%3D%22Pick%20a%20number%22%2C%0A%20%20%20%20min_value%3D0%2C%0A%20%20%20%20max_value%3D10%2C%0A%20%20%20%20value%3D2%2C%0A%20%20%20%20step%3D1%2C%0A%29%0A
 " class="stlite"></iframe>
 </div></div>
 </section>
@@ -521,17 +521,17 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-code-line-numbers="9,12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="" aria-label="1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
 <span id="cb10-2"><a href="" aria-label="2"></a></span>
 <span id="cb10-3"><a href="" aria-label="3"></a>st.slider(</span>
-<span id="cb10-4"><a href="" aria-label="4"></a>    label<span class="op">=</span><span class="st">"Pick a number"</span>, </span>
+<span id="cb10-4"><a href="" aria-label="4"></a>    label<span class="op">=</span><span class="st">"Pick a number"</span>,</span>
 <span id="cb10-5"><a href="" aria-label="5"></a>    min_value<span class="op">=</span><span class="dv">0</span>,</span>
 <span id="cb10-6"><a href="" aria-label="6"></a>    max_value<span class="op">=</span><span class="dv">10</span>,</span>
 <span id="cb10-7"><a href="" aria-label="7"></a>    value<span class="op">=</span><span class="dv">2</span>,</span>
 <span id="cb10-8"><a href="" aria-label="8"></a>    step<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb10-9"><a href="" aria-label="9"></a>    key<span class="op">=</span><span class="st">"chosen_value"</span></span>
+<span id="cb10-9"><a href="" aria-label="9"></a>    key<span class="op">=</span><span class="st">"chosen_value"</span>,</span>
 <span id="cb10-10"><a href="" aria-label="10"></a>)</span>
 <span id="cb10-11"><a href="" aria-label="11"></a></span>
 <span id="cb10-12"><a href="" aria-label="12"></a>st.write(<span class="ss">f"Chosen number: </span><span class="sc">{</span>st<span class="sc">.</span>session_state<span class="sc">.</span>chosen_value<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:40%;">
-<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0A%0Ast.slider%28%0A%20%20%20%20label%3D%22Pick%20a%20number%22%2C%20%0A%20%20%20%20min_value%3D0%2C%0A%20%20%20%20max_value%3D10%2C%0A%20%20%20%20value%3D2%2C%0A%20%20%20%20step%3D1%2C%0A%20%20%20%20key%3D%22chosen_value%22%0A%29%0A%0Ast.write%28f%22Chosen%20number%3A%20%7Bst.session_state.chosen_value%7D%22%29%0A
+<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0A%0Ast.slider%28%0A%20%20%20%20label%3D%22Pick%20a%20number%22%2C%0A%20%20%20%20min_value%3D0%2C%0A%20%20%20%20max_value%3D10%2C%0A%20%20%20%20value%3D2%2C%0A%20%20%20%20step%3D1%2C%0A%20%20%20%20key%3D%22chosen_value%22%2C%0A%29%0A%0Ast.write%28f%22Chosen%20number%3A%20%7Bst.session_state.chosen_value%7D%22%29%0A
 " class="stlite"></iframe>
 </div></div>
 </section>
@@ -610,192 +610,194 @@
 <section id="updated-model-with-nurse-costs" class="slide level2">
 <h2>Updated model with nurse costs</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-code-overflow="scroll" data-code-line-numbers="29,37,146-152"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="" aria-label="1"></a><span class="im">import</span> math</span>
-<span id="cb13-2"><a href="" aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb13-3"><a href="" aria-label="3"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-4"><a href="" aria-label="4"></a><span class="im">import</span> simpy</span>
-<span id="cb13-5"><a href="" aria-label="5"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
-<span id="cb13-6"><a href="" aria-label="6"></a></span>
-<span id="cb13-7"><a href="" aria-label="7"></a><span class="co"># stlite requires imports without dotted names</span></span>
-<span id="cb13-8"><a href="" aria-label="8"></a><span class="im">from</span> sim_tools <span class="im">import</span> distributions</span>
-<span id="cb13-9"><a href="" aria-label="9"></a>Exponential <span class="op">=</span> distributions.Exponential</span>
-<span id="cb13-10"><a href="" aria-label="10"></a>Lognormal <span class="op">=</span> distributions.Lognormal</span>
-<span id="cb13-11"><a href="" aria-label="11"></a></span>
-<span id="cb13-12"><a href="" aria-label="12"></a></span>
-<span id="cb13-13"><a href="" aria-label="13"></a><span class="kw">class</span> Patient:</span>
-<span id="cb13-14"><a href="" aria-label="14"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, p_id):</span>
-<span id="cb13-15"><a href="" aria-label="15"></a>        <span class="va">self</span>.<span class="bu">id</span> <span class="op">=</span> p_id</span>
-<span id="cb13-16"><a href="" aria-label="16"></a></span>
-<span id="cb13-17"><a href="" aria-label="17"></a>        <span class="va">self</span>.q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-2"><a href="" aria-label="2"></a></span>
+<span id="cb13-3"><a href="" aria-label="3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-4"><a href="" aria-label="4"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb13-5"><a href="" aria-label="5"></a><span class="im">import</span> simpy</span>
+<span id="cb13-6"><a href="" aria-label="6"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb13-7"><a href="" aria-label="7"></a></span>
+<span id="cb13-8"><a href="" aria-label="8"></a><span class="co"># stlite requires imports without dotted names</span></span>
+<span id="cb13-9"><a href="" aria-label="9"></a><span class="im">from</span> sim_tools <span class="im">import</span> distributions</span>
+<span id="cb13-10"><a href="" aria-label="10"></a></span>
+<span id="cb13-11"><a href="" aria-label="11"></a>Exponential <span class="op">=</span> distributions.Exponential</span>
+<span id="cb13-12"><a href="" aria-label="12"></a>Lognormal <span class="op">=</span> distributions.Lognormal</span>
+<span id="cb13-13"><a href="" aria-label="13"></a></span>
+<span id="cb13-14"><a href="" aria-label="14"></a></span>
+<span id="cb13-15"><a href="" aria-label="15"></a><span class="kw">class</span> Patient:</span>
+<span id="cb13-16"><a href="" aria-label="16"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, p_id):</span>
+<span id="cb13-17"><a href="" aria-label="17"></a>        <span class="va">self</span>.<span class="bu">id</span> <span class="op">=</span> p_id</span>
 <span id="cb13-18"><a href="" aria-label="18"></a></span>
-<span id="cb13-19"><a href="" aria-label="19"></a></span>
-<span id="cb13-20"><a href="" aria-label="20"></a><span class="kw">class</span> Param:</span>
-<span id="cb13-21"><a href="" aria-label="21"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(</span>
-<span id="cb13-22"><a href="" aria-label="22"></a>        <span class="va">self</span>,</span>
-<span id="cb13-23"><a href="" aria-label="23"></a>        mean_patient_inter<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb13-24"><a href="" aria-label="24"></a>        mean_nurse_consult_time<span class="op">=</span><span class="dv">6</span>,</span>
-<span id="cb13-25"><a href="" aria-label="25"></a>        sd_nurse_consult_time<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb13-26"><a href="" aria-label="26"></a>        num_nurses<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb13-27"><a href="" aria-label="27"></a>        sim_duration<span class="op">=</span><span class="dv">120</span>,</span>
-<span id="cb13-28"><a href="" aria-label="28"></a>        num_replications<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb13-29"><a href="" aria-label="29"></a>        nurse_cost_per_hour<span class="op">=</span><span class="dv">30</span>,  <span class="co"># NEW</span></span>
-<span id="cb13-30"><a href="" aria-label="30"></a>    ):</span>
-<span id="cb13-31"><a href="" aria-label="31"></a>        <span class="va">self</span>.mean_patient_inter <span class="op">=</span> mean_patient_inter</span>
-<span id="cb13-32"><a href="" aria-label="32"></a>        <span class="va">self</span>.mean_nurse_consult_time <span class="op">=</span> mean_nurse_consult_time</span>
-<span id="cb13-33"><a href="" aria-label="33"></a>        <span class="va">self</span>.sd_nurse_consult_time <span class="op">=</span> sd_nurse_consult_time</span>
-<span id="cb13-34"><a href="" aria-label="34"></a>        <span class="va">self</span>.num_nurses <span class="op">=</span> num_nurses</span>
-<span id="cb13-35"><a href="" aria-label="35"></a>        <span class="va">self</span>.sim_duration <span class="op">=</span> sim_duration</span>
-<span id="cb13-36"><a href="" aria-label="36"></a>        <span class="va">self</span>.num_replications <span class="op">=</span> num_replications</span>
-<span id="cb13-37"><a href="" aria-label="37"></a>        <span class="va">self</span>.nurse_cost_per_hour <span class="op">=</span> nurse_cost_per_hour  <span class="co"># NEW</span></span>
-<span id="cb13-38"><a href="" aria-label="38"></a></span>
-<span id="cb13-39"><a href="" aria-label="39"></a></span>
-<span id="cb13-40"><a href="" aria-label="40"></a><span class="kw">class</span> Model:</span>
-<span id="cb13-41"><a href="" aria-label="41"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, param, replication_id):</span>
-<span id="cb13-42"><a href="" aria-label="42"></a>        <span class="va">self</span>.param <span class="op">=</span> param</span>
-<span id="cb13-43"><a href="" aria-label="43"></a>        <span class="va">self</span>.replication_id <span class="op">=</span> replication_id</span>
-<span id="cb13-44"><a href="" aria-label="44"></a>        <span class="va">self</span>.env <span class="op">=</span> simpy.Environment()</span>
-<span id="cb13-45"><a href="" aria-label="45"></a>        <span class="va">self</span>.patient_counter <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb13-46"><a href="" aria-label="46"></a>        <span class="va">self</span>.nurse <span class="op">=</span> simpy.Resource(<span class="va">self</span>.env, capacity<span class="op">=</span><span class="va">self</span>.param.num_nurses)</span>
-<span id="cb13-47"><a href="" aria-label="47"></a></span>
-<span id="cb13-48"><a href="" aria-label="48"></a>        ss <span class="op">=</span> np.random.SeedSequence(<span class="va">self</span>.replication_id)</span>
-<span id="cb13-49"><a href="" aria-label="49"></a>        seeds <span class="op">=</span> ss.spawn(<span class="dv">2</span>)</span>
-<span id="cb13-50"><a href="" aria-label="50"></a>        <span class="va">self</span>.patient_inter_dist <span class="op">=</span> Exponential(</span>
-<span id="cb13-51"><a href="" aria-label="51"></a>            mean<span class="op">=</span><span class="va">self</span>.param.mean_patient_inter, random_seed<span class="op">=</span>seeds[<span class="dv">0</span>]</span>
-<span id="cb13-52"><a href="" aria-label="52"></a>        )</span>
-<span id="cb13-53"><a href="" aria-label="53"></a>        <span class="va">self</span>.nurse_consult_time_dist <span class="op">=</span> Lognormal(</span>
-<span id="cb13-54"><a href="" aria-label="54"></a>            mean<span class="op">=</span><span class="va">self</span>.param.mean_nurse_consult_time,</span>
-<span id="cb13-55"><a href="" aria-label="55"></a>            stdev<span class="op">=</span><span class="va">self</span>.param.sd_nurse_consult_time,</span>
-<span id="cb13-56"><a href="" aria-label="56"></a>            random_seed<span class="op">=</span>seeds[<span class="dv">1</span>],</span>
-<span id="cb13-57"><a href="" aria-label="57"></a>        )</span>
-<span id="cb13-58"><a href="" aria-label="58"></a></span>
-<span id="cb13-59"><a href="" aria-label="59"></a>        <span class="va">self</span>.list_of_patients <span class="op">=</span> []</span>
-<span id="cb13-60"><a href="" aria-label="60"></a>        <span class="va">self</span>.mean_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-61"><a href="" aria-label="61"></a>        <span class="va">self</span>.sd_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-62"><a href="" aria-label="62"></a>        <span class="va">self</span>.perc_90_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-63"><a href="" aria-label="63"></a></span>
-<span id="cb13-64"><a href="" aria-label="64"></a>    <span class="kw">def</span> generator_patient_arrivals(<span class="va">self</span>):</span>
-<span id="cb13-65"><a href="" aria-label="65"></a>        <span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb13-66"><a href="" aria-label="66"></a>            <span class="va">self</span>.patient_counter <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb13-67"><a href="" aria-label="67"></a>            p <span class="op">=</span> Patient(<span class="va">self</span>.patient_counter)</span>
-<span id="cb13-68"><a href="" aria-label="68"></a>            <span class="va">self</span>.list_of_patients.append(p)</span>
-<span id="cb13-69"><a href="" aria-label="69"></a>            <span class="va">self</span>.env.process(<span class="va">self</span>.attend_clinic(p))</span>
-<span id="cb13-70"><a href="" aria-label="70"></a>            sampled_inter <span class="op">=</span> <span class="va">self</span>.patient_inter_dist.sample()</span>
-<span id="cb13-71"><a href="" aria-label="71"></a>            <span class="cf">yield</span> <span class="va">self</span>.env.timeout(sampled_inter)</span>
-<span id="cb13-72"><a href="" aria-label="72"></a></span>
-<span id="cb13-73"><a href="" aria-label="73"></a>    <span class="kw">def</span> attend_clinic(<span class="va">self</span>, patient):</span>
-<span id="cb13-74"><a href="" aria-label="74"></a>        start_q_nurse <span class="op">=</span> <span class="va">self</span>.env.now</span>
-<span id="cb13-75"><a href="" aria-label="75"></a></span>
-<span id="cb13-76"><a href="" aria-label="76"></a>        <span class="cf">with</span> <span class="va">self</span>.nurse.request() <span class="im">as</span> req:</span>
-<span id="cb13-77"><a href="" aria-label="77"></a>            <span class="cf">yield</span> req</span>
-<span id="cb13-78"><a href="" aria-label="78"></a>            end_q_nurse <span class="op">=</span> <span class="va">self</span>.env.now</span>
-<span id="cb13-79"><a href="" aria-label="79"></a>            patient.q_time_nurse <span class="op">=</span> end_q_nurse <span class="op">-</span> start_q_nurse</span>
-<span id="cb13-80"><a href="" aria-label="80"></a>            sampled_nurse_act_time <span class="op">=</span> <span class="va">self</span>.nurse_consult_time_dist.sample()</span>
-<span id="cb13-81"><a href="" aria-label="81"></a>            <span class="cf">yield</span> <span class="va">self</span>.env.timeout(sampled_nurse_act_time)</span>
-<span id="cb13-82"><a href="" aria-label="82"></a></span>
-<span id="cb13-83"><a href="" aria-label="83"></a>    <span class="kw">def</span> run_model(<span class="va">self</span>):</span>
-<span id="cb13-84"><a href="" aria-label="84"></a>        <span class="va">self</span>.env.process(<span class="va">self</span>.generator_patient_arrivals())</span>
-<span id="cb13-85"><a href="" aria-label="85"></a>        <span class="va">self</span>.env.run(until<span class="op">=</span><span class="va">self</span>.param.sim_duration)</span>
-<span id="cb13-86"><a href="" aria-label="86"></a></span>
-<span id="cb13-87"><a href="" aria-label="87"></a>    <span class="kw">def</span> convert_entity_list_to_dataframe(<span class="va">self</span>, entity_list):</span>
-<span id="cb13-88"><a href="" aria-label="88"></a>        entity_dateframe <span class="op">=</span> pd.DataFrame(entity.__dict__ <span class="cf">for</span> entity <span class="kw">in</span> entity_list)</span>
-<span id="cb13-89"><a href="" aria-label="89"></a></span>
-<span id="cb13-90"><a href="" aria-label="90"></a>        <span class="cf">return</span> entity_dateframe</span>
+<span id="cb13-19"><a href="" aria-label="19"></a>        <span class="va">self</span>.q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-20"><a href="" aria-label="20"></a></span>
+<span id="cb13-21"><a href="" aria-label="21"></a></span>
+<span id="cb13-22"><a href="" aria-label="22"></a><span class="kw">class</span> Param:</span>
+<span id="cb13-23"><a href="" aria-label="23"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(</span>
+<span id="cb13-24"><a href="" aria-label="24"></a>        <span class="va">self</span>,</span>
+<span id="cb13-25"><a href="" aria-label="25"></a>        mean_patient_inter<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb13-26"><a href="" aria-label="26"></a>        mean_nurse_consult_time<span class="op">=</span><span class="dv">6</span>,</span>
+<span id="cb13-27"><a href="" aria-label="27"></a>        sd_nurse_consult_time<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb13-28"><a href="" aria-label="28"></a>        num_nurses<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb13-29"><a href="" aria-label="29"></a>        sim_duration<span class="op">=</span><span class="dv">120</span>,</span>
+<span id="cb13-30"><a href="" aria-label="30"></a>        num_replications<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb13-31"><a href="" aria-label="31"></a>        nurse_cost_per_hour<span class="op">=</span><span class="dv">30</span>,  <span class="co"># NEW</span></span>
+<span id="cb13-32"><a href="" aria-label="32"></a>    ):</span>
+<span id="cb13-33"><a href="" aria-label="33"></a>        <span class="va">self</span>.mean_patient_inter <span class="op">=</span> mean_patient_inter</span>
+<span id="cb13-34"><a href="" aria-label="34"></a>        <span class="va">self</span>.mean_nurse_consult_time <span class="op">=</span> mean_nurse_consult_time</span>
+<span id="cb13-35"><a href="" aria-label="35"></a>        <span class="va">self</span>.sd_nurse_consult_time <span class="op">=</span> sd_nurse_consult_time</span>
+<span id="cb13-36"><a href="" aria-label="36"></a>        <span class="va">self</span>.num_nurses <span class="op">=</span> num_nurses</span>
+<span id="cb13-37"><a href="" aria-label="37"></a>        <span class="va">self</span>.sim_duration <span class="op">=</span> sim_duration</span>
+<span id="cb13-38"><a href="" aria-label="38"></a>        <span class="va">self</span>.num_replications <span class="op">=</span> num_replications</span>
+<span id="cb13-39"><a href="" aria-label="39"></a>        <span class="va">self</span>.nurse_cost_per_hour <span class="op">=</span> nurse_cost_per_hour  <span class="co"># NEW</span></span>
+<span id="cb13-40"><a href="" aria-label="40"></a></span>
+<span id="cb13-41"><a href="" aria-label="41"></a></span>
+<span id="cb13-42"><a href="" aria-label="42"></a><span class="kw">class</span> Model:</span>
+<span id="cb13-43"><a href="" aria-label="43"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, param, replication_id):</span>
+<span id="cb13-44"><a href="" aria-label="44"></a>        <span class="va">self</span>.param <span class="op">=</span> param</span>
+<span id="cb13-45"><a href="" aria-label="45"></a>        <span class="va">self</span>.replication_id <span class="op">=</span> replication_id</span>
+<span id="cb13-46"><a href="" aria-label="46"></a>        <span class="va">self</span>.env <span class="op">=</span> simpy.Environment()</span>
+<span id="cb13-47"><a href="" aria-label="47"></a>        <span class="va">self</span>.patient_counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-48"><a href="" aria-label="48"></a>        <span class="va">self</span>.nurse <span class="op">=</span> simpy.Resource(<span class="va">self</span>.env, capacity<span class="op">=</span><span class="va">self</span>.param.num_nurses)</span>
+<span id="cb13-49"><a href="" aria-label="49"></a></span>
+<span id="cb13-50"><a href="" aria-label="50"></a>        ss <span class="op">=</span> np.random.SeedSequence(<span class="va">self</span>.replication_id)</span>
+<span id="cb13-51"><a href="" aria-label="51"></a>        seeds <span class="op">=</span> ss.spawn(<span class="dv">2</span>)</span>
+<span id="cb13-52"><a href="" aria-label="52"></a>        <span class="va">self</span>.patient_inter_dist <span class="op">=</span> Exponential(</span>
+<span id="cb13-53"><a href="" aria-label="53"></a>            mean<span class="op">=</span><span class="va">self</span>.param.mean_patient_inter, random_seed<span class="op">=</span>seeds[<span class="dv">0</span>]</span>
+<span id="cb13-54"><a href="" aria-label="54"></a>        )</span>
+<span id="cb13-55"><a href="" aria-label="55"></a>        <span class="va">self</span>.nurse_consult_time_dist <span class="op">=</span> Lognormal(</span>
+<span id="cb13-56"><a href="" aria-label="56"></a>            mean<span class="op">=</span><span class="va">self</span>.param.mean_nurse_consult_time,</span>
+<span id="cb13-57"><a href="" aria-label="57"></a>            stdev<span class="op">=</span><span class="va">self</span>.param.sd_nurse_consult_time,</span>
+<span id="cb13-58"><a href="" aria-label="58"></a>            random_seed<span class="op">=</span>seeds[<span class="dv">1</span>],</span>
+<span id="cb13-59"><a href="" aria-label="59"></a>        )</span>
+<span id="cb13-60"><a href="" aria-label="60"></a></span>
+<span id="cb13-61"><a href="" aria-label="61"></a>        <span class="va">self</span>.list_of_patients <span class="op">=</span> []</span>
+<span id="cb13-62"><a href="" aria-label="62"></a>        <span class="va">self</span>.mean_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-63"><a href="" aria-label="63"></a>        <span class="va">self</span>.sd_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-64"><a href="" aria-label="64"></a>        <span class="va">self</span>.perc_90_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-65"><a href="" aria-label="65"></a></span>
+<span id="cb13-66"><a href="" aria-label="66"></a>    <span class="kw">def</span> generator_patient_arrivals(<span class="va">self</span>):</span>
+<span id="cb13-67"><a href="" aria-label="67"></a>        <span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb13-68"><a href="" aria-label="68"></a>            <span class="va">self</span>.patient_counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb13-69"><a href="" aria-label="69"></a>            p <span class="op">=</span> Patient(<span class="va">self</span>.patient_counter)</span>
+<span id="cb13-70"><a href="" aria-label="70"></a>            <span class="va">self</span>.list_of_patients.append(p)</span>
+<span id="cb13-71"><a href="" aria-label="71"></a>            <span class="va">self</span>.env.process(<span class="va">self</span>.attend_clinic(p))</span>
+<span id="cb13-72"><a href="" aria-label="72"></a>            sampled_inter <span class="op">=</span> <span class="va">self</span>.patient_inter_dist.sample()</span>
+<span id="cb13-73"><a href="" aria-label="73"></a>            <span class="cf">yield</span> <span class="va">self</span>.env.timeout(sampled_inter)</span>
+<span id="cb13-74"><a href="" aria-label="74"></a></span>
+<span id="cb13-75"><a href="" aria-label="75"></a>    <span class="kw">def</span> attend_clinic(<span class="va">self</span>, patient):</span>
+<span id="cb13-76"><a href="" aria-label="76"></a>        start_q_nurse <span class="op">=</span> <span class="va">self</span>.env.now</span>
+<span id="cb13-77"><a href="" aria-label="77"></a></span>
+<span id="cb13-78"><a href="" aria-label="78"></a>        <span class="cf">with</span> <span class="va">self</span>.nurse.request() <span class="im">as</span> req:</span>
+<span id="cb13-79"><a href="" aria-label="79"></a>            <span class="cf">yield</span> req</span>
+<span id="cb13-80"><a href="" aria-label="80"></a>            end_q_nurse <span class="op">=</span> <span class="va">self</span>.env.now</span>
+<span id="cb13-81"><a href="" aria-label="81"></a>            patient.q_time_nurse <span class="op">=</span> end_q_nurse <span class="op">-</span> start_q_nurse</span>
+<span id="cb13-82"><a href="" aria-label="82"></a>            sampled_nurse_act_time <span class="op">=</span> <span class="va">self</span>.nurse_consult_time_dist.sample()</span>
+<span id="cb13-83"><a href="" aria-label="83"></a>            <span class="cf">yield</span> <span class="va">self</span>.env.timeout(sampled_nurse_act_time)</span>
+<span id="cb13-84"><a href="" aria-label="84"></a></span>
+<span id="cb13-85"><a href="" aria-label="85"></a>    <span class="kw">def</span> run_model(<span class="va">self</span>):</span>
+<span id="cb13-86"><a href="" aria-label="86"></a>        <span class="va">self</span>.env.process(<span class="va">self</span>.generator_patient_arrivals())</span>
+<span id="cb13-87"><a href="" aria-label="87"></a>        <span class="va">self</span>.env.run(until<span class="op">=</span><span class="va">self</span>.param.sim_duration)</span>
+<span id="cb13-88"><a href="" aria-label="88"></a></span>
+<span id="cb13-89"><a href="" aria-label="89"></a>    <span class="kw">def</span> convert_entity_list_to_dataframe(<span class="va">self</span>, entity_list):</span>
+<span id="cb13-90"><a href="" aria-label="90"></a>        entity_dateframe <span class="op">=</span> pd.DataFrame(entity.__dict__ <span class="cf">for</span> entity <span class="kw">in</span> entity_list)</span>
 <span id="cb13-91"><a href="" aria-label="91"></a></span>
-<span id="cb13-92"><a href="" aria-label="92"></a>    <span class="kw">def</span> calculate_run_results(<span class="va">self</span>, entity_dataframe):</span>
-<span id="cb13-93"><a href="" aria-label="93"></a>        <span class="va">self</span>.mean_q_time_nurse <span class="op">=</span> entity_dataframe[<span class="st">"q_time_nurse"</span>].mean()</span>
-<span id="cb13-94"><a href="" aria-label="94"></a>        <span class="va">self</span>.sd_q_time_nurse <span class="op">=</span> entity_dataframe[<span class="st">"q_time_nurse"</span>].std()</span>
-<span id="cb13-95"><a href="" aria-label="95"></a>        <span class="va">self</span>.perc_90_q_time_nurse <span class="op">=</span> entity_dataframe[<span class="st">"q_time_nurse"</span>].quantile(<span class="fl">0.9</span>)</span>
-<span id="cb13-96"><a href="" aria-label="96"></a></span>
-<span id="cb13-97"><a href="" aria-label="97"></a></span>
-<span id="cb13-98"><a href="" aria-label="98"></a><span class="kw">class</span> Trial:</span>
-<span id="cb13-99"><a href="" aria-label="99"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, param):</span>
-<span id="cb13-100"><a href="" aria-label="100"></a>        <span class="va">self</span>.param <span class="op">=</span> param</span>
-<span id="cb13-101"><a href="" aria-label="101"></a>        <span class="va">self</span>.list_of_simulation_replications <span class="op">=</span> []</span>
-<span id="cb13-102"><a href="" aria-label="102"></a>        <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-103"><a href="" aria-label="103"></a>        <span class="va">self</span>.trial_sd_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-104"><a href="" aria-label="104"></a>        <span class="va">self</span>.trial_perc_90_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-105"><a href="" aria-label="105"></a>        <span class="va">self</span>.ci_lower_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-106"><a href="" aria-label="106"></a>        <span class="va">self</span>.ci_upper_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-107"><a href="" aria-label="107"></a>        <span class="va">self</span>.se_q_time_nurse <span class="op">=</span> pd.NA</span>
-<span id="cb13-108"><a href="" aria-label="108"></a></span>
-<span id="cb13-109"><a href="" aria-label="109"></a>    <span class="kw">def</span> run_trial(<span class="va">self</span>):</span>
-<span id="cb13-110"><a href="" aria-label="110"></a>        <span class="cf">for</span> replication_id <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.param.num_replications):</span>
-<span id="cb13-111"><a href="" aria-label="111"></a>            model_replication <span class="op">=</span> Model(<span class="va">self</span>.param, replication_id)</span>
-<span id="cb13-112"><a href="" aria-label="112"></a>            model_replication.run_model()</span>
-<span id="cb13-113"><a href="" aria-label="113"></a>            patient_df <span class="op">=</span> model_replication.convert_entity_list_to_dataframe(</span>
-<span id="cb13-114"><a href="" aria-label="114"></a>                model_replication.list_of_patients</span>
-<span id="cb13-115"><a href="" aria-label="115"></a>            )</span>
-<span id="cb13-116"><a href="" aria-label="116"></a>            model_replication.calculate_run_results(patient_df)</span>
-<span id="cb13-117"><a href="" aria-label="117"></a>            <span class="va">self</span>.list_of_simulation_replications.append(model_replication)</span>
-<span id="cb13-118"><a href="" aria-label="118"></a></span>
-<span id="cb13-119"><a href="" aria-label="119"></a>    <span class="kw">def</span> calculate_trial_results(<span class="va">self</span>):</span>
-<span id="cb13-120"><a href="" aria-label="120"></a>        <span class="va">self</span>.replication_df <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb13-121"><a href="" aria-label="121"></a>            replication.__dict__ <span class="cf">for</span> replication <span class="kw">in</span> <span class="va">self</span>.list_of_simulation_replications</span>
-<span id="cb13-122"><a href="" aria-label="122"></a>        )</span>
-<span id="cb13-123"><a href="" aria-label="123"></a></span>
-<span id="cb13-124"><a href="" aria-label="124"></a>        <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">=</span> <span class="va">self</span>.replication_df[<span class="st">"mean_q_time_nurse"</span>].mean()</span>
+<span id="cb13-92"><a href="" aria-label="92"></a>        <span class="cf">return</span> entity_dateframe</span>
+<span id="cb13-93"><a href="" aria-label="93"></a></span>
+<span id="cb13-94"><a href="" aria-label="94"></a>    <span class="kw">def</span> calculate_run_results(<span class="va">self</span>, entity_dataframe):</span>
+<span id="cb13-95"><a href="" aria-label="95"></a>        <span class="va">self</span>.mean_q_time_nurse <span class="op">=</span> entity_dataframe[<span class="st">"q_time_nurse"</span>].mean()</span>
+<span id="cb13-96"><a href="" aria-label="96"></a>        <span class="va">self</span>.sd_q_time_nurse <span class="op">=</span> entity_dataframe[<span class="st">"q_time_nurse"</span>].std()</span>
+<span id="cb13-97"><a href="" aria-label="97"></a>        <span class="va">self</span>.perc_90_q_time_nurse <span class="op">=</span> entity_dataframe[<span class="st">"q_time_nurse"</span>].quantile(<span class="fl">0.9</span>)</span>
+<span id="cb13-98"><a href="" aria-label="98"></a></span>
+<span id="cb13-99"><a href="" aria-label="99"></a></span>
+<span id="cb13-100"><a href="" aria-label="100"></a><span class="kw">class</span> Trial:</span>
+<span id="cb13-101"><a href="" aria-label="101"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, param):</span>
+<span id="cb13-102"><a href="" aria-label="102"></a>        <span class="va">self</span>.param <span class="op">=</span> param</span>
+<span id="cb13-103"><a href="" aria-label="103"></a>        <span class="va">self</span>.list_of_simulation_replications <span class="op">=</span> []</span>
+<span id="cb13-104"><a href="" aria-label="104"></a>        <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-105"><a href="" aria-label="105"></a>        <span class="va">self</span>.trial_sd_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-106"><a href="" aria-label="106"></a>        <span class="va">self</span>.trial_perc_90_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-107"><a href="" aria-label="107"></a>        <span class="va">self</span>.ci_lower_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-108"><a href="" aria-label="108"></a>        <span class="va">self</span>.ci_upper_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-109"><a href="" aria-label="109"></a>        <span class="va">self</span>.se_q_time_nurse <span class="op">=</span> pd.NA</span>
+<span id="cb13-110"><a href="" aria-label="110"></a></span>
+<span id="cb13-111"><a href="" aria-label="111"></a>    <span class="kw">def</span> run_trial(<span class="va">self</span>):</span>
+<span id="cb13-112"><a href="" aria-label="112"></a>        <span class="cf">for</span> replication_id <span class="kw">in</span> <span class="bu">range</span>(<span class="va">self</span>.param.num_replications):</span>
+<span id="cb13-113"><a href="" aria-label="113"></a>            model_replication <span class="op">=</span> Model(<span class="va">self</span>.param, replication_id)</span>
+<span id="cb13-114"><a href="" aria-label="114"></a>            model_replication.run_model()</span>
+<span id="cb13-115"><a href="" aria-label="115"></a>            patient_df <span class="op">=</span> model_replication.convert_entity_list_to_dataframe(</span>
+<span id="cb13-116"><a href="" aria-label="116"></a>                model_replication.list_of_patients</span>
+<span id="cb13-117"><a href="" aria-label="117"></a>            )</span>
+<span id="cb13-118"><a href="" aria-label="118"></a>            model_replication.calculate_run_results(patient_df)</span>
+<span id="cb13-119"><a href="" aria-label="119"></a>            <span class="va">self</span>.list_of_simulation_replications.append(model_replication)</span>
+<span id="cb13-120"><a href="" aria-label="120"></a></span>
+<span id="cb13-121"><a href="" aria-label="121"></a>    <span class="kw">def</span> calculate_trial_results(<span class="va">self</span>):</span>
+<span id="cb13-122"><a href="" aria-label="122"></a>        <span class="va">self</span>.replication_df <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb13-123"><a href="" aria-label="123"></a>            replication.__dict__ <span class="cf">for</span> replication <span class="kw">in</span> <span class="va">self</span>.list_of_simulation_replications</span>
+<span id="cb13-124"><a href="" aria-label="124"></a>        )</span>
 <span id="cb13-125"><a href="" aria-label="125"></a></span>
-<span id="cb13-126"><a href="" aria-label="126"></a>        <span class="va">self</span>.trial_sd_q_time_nurse <span class="op">=</span> <span class="va">self</span>.replication_df[<span class="st">"mean_q_time_nurse"</span>].std()</span>
+<span id="cb13-126"><a href="" aria-label="126"></a>        <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">=</span> <span class="va">self</span>.replication_df[<span class="st">"mean_q_time_nurse"</span>].mean()</span>
 <span id="cb13-127"><a href="" aria-label="127"></a></span>
-<span id="cb13-128"><a href="" aria-label="128"></a>        <span class="va">self</span>.trial_perc_90_q_time_nurse <span class="op">=</span> <span class="va">self</span>.replication_df[</span>
-<span id="cb13-129"><a href="" aria-label="129"></a>            <span class="st">"mean_q_time_nurse"</span></span>
-<span id="cb13-130"><a href="" aria-label="130"></a>        ].quantile(<span class="fl">0.9</span>)</span>
-<span id="cb13-131"><a href="" aria-label="131"></a></span>
-<span id="cb13-132"><a href="" aria-label="132"></a>        <span class="va">self</span>.se_q_time_nurse <span class="op">=</span> <span class="va">self</span>.trial_sd_q_time_nurse <span class="op">/</span> math.sqrt(</span>
-<span id="cb13-133"><a href="" aria-label="133"></a>            <span class="va">self</span>.param.num_replications</span>
-<span id="cb13-134"><a href="" aria-label="134"></a>        )</span>
-<span id="cb13-135"><a href="" aria-label="135"></a></span>
-<span id="cb13-136"><a href="" aria-label="136"></a>        t <span class="op">=</span> stats.t.ppf(<span class="fl">0.975</span>, df<span class="op">=</span><span class="va">self</span>.param.num_replications <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb13-128"><a href="" aria-label="128"></a>        <span class="va">self</span>.trial_sd_q_time_nurse <span class="op">=</span> <span class="va">self</span>.replication_df[<span class="st">"mean_q_time_nurse"</span>].std()</span>
+<span id="cb13-129"><a href="" aria-label="129"></a></span>
+<span id="cb13-130"><a href="" aria-label="130"></a>        <span class="va">self</span>.trial_perc_90_q_time_nurse <span class="op">=</span> <span class="va">self</span>.replication_df[</span>
+<span id="cb13-131"><a href="" aria-label="131"></a>            <span class="st">"mean_q_time_nurse"</span></span>
+<span id="cb13-132"><a href="" aria-label="132"></a>        ].quantile(<span class="fl">0.9</span>)</span>
+<span id="cb13-133"><a href="" aria-label="133"></a></span>
+<span id="cb13-134"><a href="" aria-label="134"></a>        <span class="va">self</span>.se_q_time_nurse <span class="op">=</span> <span class="va">self</span>.trial_sd_q_time_nurse <span class="op">/</span> math.sqrt(</span>
+<span id="cb13-135"><a href="" aria-label="135"></a>            <span class="va">self</span>.param.num_replications</span>
+<span id="cb13-136"><a href="" aria-label="136"></a>        )</span>
 <span id="cb13-137"><a href="" aria-label="137"></a></span>
-<span id="cb13-138"><a href="" aria-label="138"></a>        <span class="va">self</span>.ci_lower_q_time_nurse <span class="op">=</span> <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">-</span> (</span>
-<span id="cb13-139"><a href="" aria-label="139"></a>            t <span class="op">*</span> <span class="va">self</span>.se_q_time_nurse</span>
-<span id="cb13-140"><a href="" aria-label="140"></a>        )</span>
-<span id="cb13-141"><a href="" aria-label="141"></a></span>
-<span id="cb13-142"><a href="" aria-label="142"></a>        <span class="va">self</span>.ci_upper_q_time_nurse <span class="op">=</span> <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">+</span> (</span>
-<span id="cb13-143"><a href="" aria-label="143"></a>            t <span class="op">*</span> <span class="va">self</span>.se_q_time_nurse</span>
-<span id="cb13-144"><a href="" aria-label="144"></a>        )</span>
-<span id="cb13-145"><a href="" aria-label="145"></a></span>
-<span id="cb13-146"><a href="" aria-label="146"></a>        <span class="co"># NEW</span></span>
-<span id="cb13-147"><a href="" aria-label="147"></a>        <span class="va">self</span>.total_nurse_cost <span class="op">=</span> (</span>
-<span id="cb13-148"><a href="" aria-label="148"></a>            <span class="va">self</span>.param.num_nurses</span>
-<span id="cb13-149"><a href="" aria-label="149"></a>            <span class="op">*</span> <span class="va">self</span>.param.sim_duration</span>
-<span id="cb13-150"><a href="" aria-label="150"></a>            <span class="op">/</span> <span class="dv">60</span></span>
-<span id="cb13-151"><a href="" aria-label="151"></a>            <span class="op">*</span> <span class="va">self</span>.param.nurse_cost_per_hour</span>
-<span id="cb13-152"><a href="" aria-label="152"></a>        )</span>
-<span id="cb13-153"><a href="" aria-label="153"></a></span>
-<span id="cb13-154"><a href="" aria-label="154"></a></span>
-<span id="cb13-155"><a href="" aria-label="155"></a>base_case_params <span class="op">=</span> Param()</span>
-<span id="cb13-156"><a href="" aria-label="156"></a>base_case_trial <span class="op">=</span> Trial(base_case_params)</span>
-<span id="cb13-157"><a href="" aria-label="157"></a>base_case_trial.run_trial()</span>
-<span id="cb13-158"><a href="" aria-label="158"></a>base_case_trial.calculate_trial_results()</span>
-<span id="cb13-159"><a href="" aria-label="159"></a><span class="bu">print</span> (<span class="st">"BASE CASE TRIAL RESULTS"</span>)</span>
-<span id="cb13-160"><a href="" aria-label="160"></a><span class="bu">print</span> (<span class="st">"-----------------------"</span>)</span>
-<span id="cb13-161"><a href="" aria-label="161"></a><span class="bu">print</span> (<span class="st">"Queuing Time for the Nurse"</span>)</span>
-<span id="cb13-162"><a href="" aria-label="162"></a><span class="bu">print</span> (<span class="ss">f"Mean : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
-<span id="cb13-163"><a href="" aria-label="163"></a><span class="bu">print</span> (<span class="ss">f"SD : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
-<span id="cb13-164"><a href="" aria-label="164"></a><span class="bu">print</span> (<span class="ss">f"90th Perc : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
-<span id="cb13-165"><a href="" aria-label="165"></a><span class="bu">print</span> (<span class="ss">f"Standard Error : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb13-166"><a href="" aria-label="166"></a><span class="bu">print</span> (</span>
-<span id="cb13-167"><a href="" aria-label="167"></a>    <span class="ss">f"95% CI : (</span><span class="sc">{</span>base_case_trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">, "</span>,</span>
-<span id="cb13-168"><a href="" aria-label="168"></a>    <span class="ss">f"</span><span class="sc">{</span>base_case_trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes"</span></span>
-<span id="cb13-169"><a href="" aria-label="169"></a>)</span>
-<span id="cb13-170"><a href="" aria-label="170"></a><span class="bu">print</span> ()</span>
-<span id="cb13-171"><a href="" aria-label="171"></a></span>
-<span id="cb13-172"><a href="" aria-label="172"></a>what_if_params <span class="op">=</span> Param(num_nurses<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb13-173"><a href="" aria-label="173"></a>what_if_trial <span class="op">=</span> Trial(what_if_params)</span>
-<span id="cb13-174"><a href="" aria-label="174"></a>what_if_trial.run_trial()</span>
-<span id="cb13-175"><a href="" aria-label="175"></a>what_if_trial.calculate_trial_results()</span>
-<span id="cb13-176"><a href="" aria-label="176"></a><span class="bu">print</span> (<span class="st">"2 NURSES TRIAL RESULTS"</span>)</span>
-<span id="cb13-177"><a href="" aria-label="177"></a><span class="bu">print</span> (<span class="st">"----------------------"</span>)</span>
-<span id="cb13-178"><a href="" aria-label="178"></a><span class="bu">print</span> (<span class="st">"Queuing Time for the Nurse"</span>)</span>
-<span id="cb13-179"><a href="" aria-label="179"></a><span class="bu">print</span> (<span class="ss">f"Mean : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
-<span id="cb13-180"><a href="" aria-label="180"></a><span class="bu">print</span> (<span class="ss">f"SD : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
-<span id="cb13-181"><a href="" aria-label="181"></a><span class="bu">print</span> (<span class="ss">f"90th Perc : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
-<span id="cb13-182"><a href="" aria-label="182"></a><span class="bu">print</span> (<span class="ss">f"Standard Error : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb13-183"><a href="" aria-label="183"></a><span class="bu">print</span> (</span>
-<span id="cb13-184"><a href="" aria-label="184"></a>    <span class="ss">f"95% CI : (</span><span class="sc">{</span>what_if_trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">, "</span>,</span>
-<span id="cb13-185"><a href="" aria-label="185"></a>    <span class="ss">f"</span><span class="sc">{</span>what_if_trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes"</span></span>
-<span id="cb13-186"><a href="" aria-label="186"></a>)</span>
-<span id="cb13-187"><a href="" aria-label="187"></a><span class="bu">print</span> ()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-138"><a href="" aria-label="138"></a>        t <span class="op">=</span> stats.t.ppf(<span class="fl">0.975</span>, df<span class="op">=</span><span class="va">self</span>.param.num_replications <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb13-139"><a href="" aria-label="139"></a></span>
+<span id="cb13-140"><a href="" aria-label="140"></a>        <span class="va">self</span>.ci_lower_q_time_nurse <span class="op">=</span> <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">-</span> (</span>
+<span id="cb13-141"><a href="" aria-label="141"></a>            t <span class="op">*</span> <span class="va">self</span>.se_q_time_nurse</span>
+<span id="cb13-142"><a href="" aria-label="142"></a>        )</span>
+<span id="cb13-143"><a href="" aria-label="143"></a></span>
+<span id="cb13-144"><a href="" aria-label="144"></a>        <span class="va">self</span>.ci_upper_q_time_nurse <span class="op">=</span> <span class="va">self</span>.trial_mean_q_time_nurse <span class="op">+</span> (</span>
+<span id="cb13-145"><a href="" aria-label="145"></a>            t <span class="op">*</span> <span class="va">self</span>.se_q_time_nurse</span>
+<span id="cb13-146"><a href="" aria-label="146"></a>        )</span>
+<span id="cb13-147"><a href="" aria-label="147"></a></span>
+<span id="cb13-148"><a href="" aria-label="148"></a>        <span class="co"># NEW</span></span>
+<span id="cb13-149"><a href="" aria-label="149"></a>        <span class="va">self</span>.total_nurse_cost <span class="op">=</span> (</span>
+<span id="cb13-150"><a href="" aria-label="150"></a>            <span class="va">self</span>.param.num_nurses</span>
+<span id="cb13-151"><a href="" aria-label="151"></a>            <span class="op">*</span> <span class="va">self</span>.param.sim_duration</span>
+<span id="cb13-152"><a href="" aria-label="152"></a>            <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb13-153"><a href="" aria-label="153"></a>            <span class="op">*</span> <span class="va">self</span>.param.nurse_cost_per_hour</span>
+<span id="cb13-154"><a href="" aria-label="154"></a>        )</span>
+<span id="cb13-155"><a href="" aria-label="155"></a></span>
+<span id="cb13-156"><a href="" aria-label="156"></a></span>
+<span id="cb13-157"><a href="" aria-label="157"></a>base_case_params <span class="op">=</span> Param()</span>
+<span id="cb13-158"><a href="" aria-label="158"></a>base_case_trial <span class="op">=</span> Trial(base_case_params)</span>
+<span id="cb13-159"><a href="" aria-label="159"></a>base_case_trial.run_trial()</span>
+<span id="cb13-160"><a href="" aria-label="160"></a>base_case_trial.calculate_trial_results()</span>
+<span id="cb13-161"><a href="" aria-label="161"></a><span class="bu">print</span>(<span class="st">"BASE CASE TRIAL RESULTS"</span>)</span>
+<span id="cb13-162"><a href="" aria-label="162"></a><span class="bu">print</span>(<span class="st">"-----------------------"</span>)</span>
+<span id="cb13-163"><a href="" aria-label="163"></a><span class="bu">print</span>(<span class="st">"Queuing Time for the Nurse"</span>)</span>
+<span id="cb13-164"><a href="" aria-label="164"></a><span class="bu">print</span>(<span class="ss">f"Mean : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
+<span id="cb13-165"><a href="" aria-label="165"></a><span class="bu">print</span>(<span class="ss">f"SD : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
+<span id="cb13-166"><a href="" aria-label="166"></a><span class="bu">print</span>(<span class="ss">f"90th Perc : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
+<span id="cb13-167"><a href="" aria-label="167"></a><span class="bu">print</span>(<span class="ss">f"Standard Error : </span><span class="sc">{</span>base_case_trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb13-168"><a href="" aria-label="168"></a><span class="bu">print</span>(</span>
+<span id="cb13-169"><a href="" aria-label="169"></a>    <span class="ss">f"95% CI : (</span><span class="sc">{</span>base_case_trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">, "</span>,</span>
+<span id="cb13-170"><a href="" aria-label="170"></a>    <span class="ss">f"</span><span class="sc">{</span>base_case_trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes"</span>,</span>
+<span id="cb13-171"><a href="" aria-label="171"></a>)</span>
+<span id="cb13-172"><a href="" aria-label="172"></a><span class="bu">print</span>()</span>
+<span id="cb13-173"><a href="" aria-label="173"></a></span>
+<span id="cb13-174"><a href="" aria-label="174"></a>what_if_params <span class="op">=</span> Param(num_nurses<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb13-175"><a href="" aria-label="175"></a>what_if_trial <span class="op">=</span> Trial(what_if_params)</span>
+<span id="cb13-176"><a href="" aria-label="176"></a>what_if_trial.run_trial()</span>
+<span id="cb13-177"><a href="" aria-label="177"></a>what_if_trial.calculate_trial_results()</span>
+<span id="cb13-178"><a href="" aria-label="178"></a><span class="bu">print</span>(<span class="st">"2 NURSES TRIAL RESULTS"</span>)</span>
+<span id="cb13-179"><a href="" aria-label="179"></a><span class="bu">print</span>(<span class="st">"----------------------"</span>)</span>
+<span id="cb13-180"><a href="" aria-label="180"></a><span class="bu">print</span>(<span class="st">"Queuing Time for the Nurse"</span>)</span>
+<span id="cb13-181"><a href="" aria-label="181"></a><span class="bu">print</span>(<span class="ss">f"Mean : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
+<span id="cb13-182"><a href="" aria-label="182"></a><span class="bu">print</span>(<span class="ss">f"SD : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
+<span id="cb13-183"><a href="" aria-label="183"></a><span class="bu">print</span>(<span class="ss">f"90th Perc : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes"</span>)</span>
+<span id="cb13-184"><a href="" aria-label="184"></a><span class="bu">print</span>(<span class="ss">f"Standard Error : </span><span class="sc">{</span>what_if_trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb13-185"><a href="" aria-label="185"></a><span class="bu">print</span>(</span>
+<span id="cb13-186"><a href="" aria-label="186"></a>    <span class="ss">f"95% CI : (</span><span class="sc">{</span>what_if_trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">, "</span>,</span>
+<span id="cb13-187"><a href="" aria-label="187"></a>    <span class="ss">f"</span><span class="sc">{</span>what_if_trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes"</span>,</span>
+<span id="cb13-188"><a href="" aria-label="188"></a>)</span>
+<span id="cb13-189"><a href="" aria-label="189"></a><span class="bu">print</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="streamlit-app" class="slide level2">
 <h2>Streamlit app</h2>
@@ -920,10 +922,10 @@ For this app, we’ll include all everything in <code>Param</code>.</p>
 <span id="cb18-2"><a href="" aria-label="2"></a>    label<span class="op">=</span><span class="st">"Number of nurses"</span>,</span>
 <span id="cb18-3"><a href="" aria-label="3"></a>    options<span class="op">=</span><span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>),</span>
 <span id="cb18-4"><a href="" aria-label="4"></a>    default<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb18-5"><a href="" aria-label="5"></a>    key<span class="op">=</span><span class="st">"num_nurses"</span></span>
+<span id="cb18-5"><a href="" aria-label="5"></a>    key<span class="op">=</span><span class="st">"num_nurses"</span>,</span>
 <span id="cb18-6"><a href="" aria-label="6"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:45%;">
-<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0A%0Ast.pills%28%0A%20%20%20%20label%3D%22Number%20of%20nurses%22%2C%0A%20%20%20%20options%3Drange%281%2C%205%29%2C%0A%20%20%20%20default%3D1%2C%0A%20%20%20%20key%3D%22num_nurses%22%0A%29%0A
+<iframe src="https://share.stlite.net/?embed=true#code=import%20streamlit%20as%20st%0A%0Ast.pills%28%0A%20%20%20%20label%3D%22Number%20of%20nurses%22%2C%0A%20%20%20%20options%3Drange%281%2C%205%29%2C%0A%20%20%20%20default%3D1%2C%0A%20%20%20%20key%3D%22num_nurses%22%2C%0A%29%0A
 " class="stlite"></iframe>
 </div></div>
 </section>
@@ -1090,29 +1092,19 @@ For this app, we’ll include all everything in <code>Param</code>.</p>
 <span id="cb24-12"><a href="" aria-label="12"></a>    trial.run_trial()</span>
 <span id="cb24-13"><a href="" aria-label="13"></a>    trial.calculate_trial_results()</span>
 <span id="cb24-14"><a href="" aria-label="14"></a></span>
-<span id="cb24-15"><a href="" aria-label="15"></a>    results <span class="op">=</span> {</span>
-<span id="cb24-16"><a href="" aria-label="16"></a>        <span class="st">"mean"</span>: trial.trial_mean_q_time_nurse,</span>
-<span id="cb24-17"><a href="" aria-label="17"></a>        <span class="st">"sd"</span>: trial.trial_sd_q_time_nurse,</span>
-<span id="cb24-18"><a href="" aria-label="18"></a>        <span class="st">"p90"</span>: trial.trial_perc_90_q_time_nurse,</span>
-<span id="cb24-19"><a href="" aria-label="19"></a>        <span class="st">"se"</span>: trial.se_q_time_nurse,</span>
-<span id="cb24-20"><a href="" aria-label="20"></a>        <span class="st">"ci_lower"</span>: trial.ci_lower_q_time_nurse,</span>
-<span id="cb24-21"><a href="" aria-label="21"></a>        <span class="st">"ci_upper"</span>: trial.ci_upper_q_time_nurse,</span>
-<span id="cb24-22"><a href="" aria-label="22"></a>        <span class="st">"cost"</span>: trial.total_nurse_cost,</span>
-<span id="cb24-23"><a href="" aria-label="23"></a>        <span class="st">"df"</span>: trial.replication_df,</span>
-<span id="cb24-24"><a href="" aria-label="24"></a>    }</span>
-<span id="cb24-25"><a href="" aria-label="25"></a></span>
-<span id="cb24-26"><a href="" aria-label="26"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
-<span id="cb24-27"><a href="" aria-label="27"></a>    st.write(<span class="ss">f"""</span></span>
-<span id="cb24-28"><a href="" aria-label="28"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
-<span id="cb24-29"><a href="" aria-label="29"></a></span>
-<span id="cb24-30"><a href="" aria-label="30"></a><span class="ss">    * Mean: </span><span class="sc">{</span>results[<span class="st">"mean"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb24-31"><a href="" aria-label="31"></a><span class="ss">    * SD: </span><span class="sc">{</span>results[<span class="st">"sd"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb24-32"><a href="" aria-label="32"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>results[<span class="st">"p90"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb24-33"><a href="" aria-label="33"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>results[<span class="st">"se"</span>]<span class="sc">:.2f}</span></span>
-<span id="cb24-34"><a href="" aria-label="34"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>results[<span class="st">"ci_lower"</span>]<span class="sc">:.2f}</span><span class="ss">, </span><span class="sc">{</span>results[<span class="st">"ci_upper"</span>]<span class="sc">:.2f}</span><span class="ss">) minutes</span></span>
-<span id="cb24-35"><a href="" aria-label="35"></a><span class="ss">    </span></span>
-<span id="cb24-36"><a href="" aria-label="36"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>results[<span class="st">"cost"</span>]<span class="sc">:,.2f}</span></span>
-<span id="cb24-37"><a href="" aria-label="37"></a><span class="ss">    """</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb24-15"><a href="" aria-label="15"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
+<span id="cb24-16"><a href="" aria-label="16"></a>    st.write(<span class="ss">f"""</span></span>
+<span id="cb24-17"><a href="" aria-label="17"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
+<span id="cb24-18"><a href="" aria-label="18"></a></span>
+<span id="cb24-19"><a href="" aria-label="19"></a><span class="ss">    * Mean: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb24-20"><a href="" aria-label="20"></a><span class="ss">    * SD: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb24-21"><a href="" aria-label="21"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb24-22"><a href="" aria-label="22"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span></span>
+<span id="cb24-23"><a href="" aria-label="23"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">,</span></span>
+<span id="cb24-24"><a href="" aria-label="24"></a><span class="ss">    </span><span class="sc">{</span>trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes.</span></span>
+<span id="cb24-25"><a href="" aria-label="25"></a><span class="ss">    </span></span>
+<span id="cb24-26"><a href="" aria-label="26"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>trial<span class="sc">.</span>total_nurse_cost<span class="sc">:,.2f}</span></span>
+<span id="cb24-27"><a href="" aria-label="27"></a><span class="ss">    """</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="charts" class="slide level2">
 <h2>Charts</h2>
@@ -1131,42 +1123,34 @@ For this app, we’ll include all everything in <code>Param</code>.</p>
 <span id="cb25-12"><a href="" aria-label="12"></a>    trial.run_trial()</span>
 <span id="cb25-13"><a href="" aria-label="13"></a>    trial.calculate_trial_results()</span>
 <span id="cb25-14"><a href="" aria-label="14"></a></span>
-<span id="cb25-15"><a href="" aria-label="15"></a>    results <span class="op">=</span> {</span>
-<span id="cb25-16"><a href="" aria-label="16"></a>        <span class="st">"mean"</span>: trial.trial_mean_q_time_nurse,</span>
-<span id="cb25-17"><a href="" aria-label="17"></a>        <span class="st">"sd"</span>: trial.trial_sd_q_time_nurse,</span>
-<span id="cb25-18"><a href="" aria-label="18"></a>        <span class="st">"p90"</span>: trial.trial_perc_90_q_time_nurse,</span>
-<span id="cb25-19"><a href="" aria-label="19"></a>        <span class="st">"se"</span>: trial.se_q_time_nurse,</span>
-<span id="cb25-20"><a href="" aria-label="20"></a>        <span class="st">"ci_lower"</span>: trial.ci_lower_q_time_nurse,</span>
-<span id="cb25-21"><a href="" aria-label="21"></a>        <span class="st">"ci_upper"</span>: trial.ci_upper_q_time_nurse,</span>
-<span id="cb25-22"><a href="" aria-label="22"></a>        <span class="st">"cost"</span>: trial.total_nurse_cost,</span>
-<span id="cb25-23"><a href="" aria-label="23"></a>        <span class="st">"df"</span>: trial.replication_df,</span>
-<span id="cb25-24"><a href="" aria-label="24"></a>    }</span>
-<span id="cb25-25"><a href="" aria-label="25"></a></span>
-<span id="cb25-26"><a href="" aria-label="26"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
-<span id="cb25-27"><a href="" aria-label="27"></a>    st.write(<span class="ss">f"""</span></span>
-<span id="cb25-28"><a href="" aria-label="28"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
-<span id="cb25-29"><a href="" aria-label="29"></a></span>
-<span id="cb25-30"><a href="" aria-label="30"></a><span class="ss">    * Mean: </span><span class="sc">{</span>results[<span class="st">"mean"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb25-31"><a href="" aria-label="31"></a><span class="ss">    * SD: </span><span class="sc">{</span>results[<span class="st">"sd"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb25-32"><a href="" aria-label="32"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>results[<span class="st">"p90"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb25-33"><a href="" aria-label="33"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>results[<span class="st">"se"</span>]<span class="sc">:.2f}</span></span>
-<span id="cb25-34"><a href="" aria-label="34"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>results[<span class="st">"ci_lower"</span>]<span class="sc">:.2f}</span><span class="ss">, </span><span class="sc">{</span>results[<span class="st">"ci_upper"</span>]<span class="sc">:.2f}</span><span class="ss">) minutes</span></span>
-<span id="cb25-35"><a href="" aria-label="35"></a><span class="ss">    </span></span>
-<span id="cb25-36"><a href="" aria-label="36"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>results[<span class="st">"cost"</span>]<span class="sc">:,.2f}</span></span>
-<span id="cb25-37"><a href="" aria-label="37"></a><span class="ss">    """</span>)</span>
-<span id="cb25-38"><a href="" aria-label="38"></a></span>
-<span id="cb25-39"><a href="" aria-label="39"></a>    st.subheader(<span class="st">"Results from individual replications"</span>)</span>
-<span id="cb25-40"><a href="" aria-label="40"></a>    st.write(</span>
-<span id="cb25-41"><a href="" aria-label="41"></a>        <span class="st">"The chart shows how the mean nurse queue time varies between **individual** replications."</span></span>
-<span id="cb25-42"><a href="" aria-label="42"></a>    )</span>
-<span id="cb25-43"><a href="" aria-label="43"></a></span>
-<span id="cb25-44"><a href="" aria-label="44"></a>    fig <span class="op">=</span> px.histogram(</span>
-<span id="cb25-45"><a href="" aria-label="45"></a>        data_frame<span class="op">=</span>results[<span class="st">"df"</span>],</span>
-<span id="cb25-46"><a href="" aria-label="46"></a>        x<span class="op">=</span><span class="st">"mean_q_time_nurse"</span>,</span>
-<span id="cb25-47"><a href="" aria-label="47"></a>        labels<span class="op">=</span>{<span class="st">"mean_q_time_nurse"</span>: <span class="st">"Mean nurse queue time"</span>},</span>
-<span id="cb25-48"><a href="" aria-label="48"></a>    )</span>
-<span id="cb25-49"><a href="" aria-label="49"></a>    fig.update_layout(yaxis_title<span class="op">=</span><span class="st">"Number of replications"</span>)</span>
-<span id="cb25-50"><a href="" aria-label="50"></a>    st.plotly_chart(fig)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb25-15"><a href="" aria-label="15"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
+<span id="cb25-16"><a href="" aria-label="16"></a>    st.write(<span class="ss">f"""</span></span>
+<span id="cb25-17"><a href="" aria-label="17"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
+<span id="cb25-18"><a href="" aria-label="18"></a></span>
+<span id="cb25-19"><a href="" aria-label="19"></a><span class="ss">    * Mean: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb25-20"><a href="" aria-label="20"></a><span class="ss">    * SD: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb25-21"><a href="" aria-label="21"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb25-22"><a href="" aria-label="22"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span></span>
+<span id="cb25-23"><a href="" aria-label="23"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">,</span></span>
+<span id="cb25-24"><a href="" aria-label="24"></a><span class="ss">    </span><span class="sc">{</span>trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes.</span></span>
+<span id="cb25-25"><a href="" aria-label="25"></a><span class="ss">    </span></span>
+<span id="cb25-26"><a href="" aria-label="26"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>trial<span class="sc">.</span>total_nurse_cost<span class="sc">:,.2f}</span></span>
+<span id="cb25-27"><a href="" aria-label="27"></a><span class="ss">    """</span>)</span>
+<span id="cb25-28"><a href="" aria-label="28"></a></span>
+<span id="cb25-29"><a href="" aria-label="29"></a>    st.subheader(<span class="st">"Results from individual replications"</span>)</span>
+<span id="cb25-30"><a href="" aria-label="30"></a>    st.write(</span>
+<span id="cb25-31"><a href="" aria-label="31"></a>        <span class="st">"The chart shows how the mean nurse queue time varies between **individual** replications."</span></span>
+<span id="cb25-32"><a href="" aria-label="32"></a>    )</span>
+<span id="cb25-33"><a href="" aria-label="33"></a></span>
+<span id="cb25-34"><a href="" aria-label="34"></a>    fig <span class="op">=</span> px.histogram(</span>
+<span id="cb25-35"><a href="" aria-label="35"></a>        data_frame<span class="op">=</span>trial.replication_df,</span>
+<span id="cb25-36"><a href="" aria-label="36"></a>        x<span class="op">=</span><span class="st">"mean_q_time_nurse"</span>,</span>
+<span id="cb25-37"><a href="" aria-label="37"></a>    )</span>
+<span id="cb25-38"><a href="" aria-label="38"></a>    fig.update_layout(</span>
+<span id="cb25-39"><a href="" aria-label="39"></a>        xaxis_title<span class="op">=</span><span class="st">"Mean nurse queue time"</span>,</span>
+<span id="cb25-40"><a href="" aria-label="40"></a>        yaxis_title<span class="op">=</span><span class="st">"Number of replications"</span></span>
+<span id="cb25-41"><a href="" aria-label="41"></a>    )</span>
+<span id="cb25-42"><a href="" aria-label="42"></a>    st.plotly_chart(fig)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="dataframes" class="slide level2">
 <h2>Dataframes</h2>
@@ -1185,54 +1169,46 @@ For this app, we’ll include all everything in <code>Param</code>.</p>
 <span id="cb26-12"><a href="" aria-label="12"></a>    trial.run_trial()</span>
 <span id="cb26-13"><a href="" aria-label="13"></a>    trial.calculate_trial_results()</span>
 <span id="cb26-14"><a href="" aria-label="14"></a></span>
-<span id="cb26-15"><a href="" aria-label="15"></a>    results <span class="op">=</span> {</span>
-<span id="cb26-16"><a href="" aria-label="16"></a>        <span class="st">"mean"</span>: trial.trial_mean_q_time_nurse,</span>
-<span id="cb26-17"><a href="" aria-label="17"></a>        <span class="st">"sd"</span>: trial.trial_sd_q_time_nurse,</span>
-<span id="cb26-18"><a href="" aria-label="18"></a>        <span class="st">"p90"</span>: trial.trial_perc_90_q_time_nurse,</span>
-<span id="cb26-19"><a href="" aria-label="19"></a>        <span class="st">"se"</span>: trial.se_q_time_nurse,</span>
-<span id="cb26-20"><a href="" aria-label="20"></a>        <span class="st">"ci_lower"</span>: trial.ci_lower_q_time_nurse,</span>
-<span id="cb26-21"><a href="" aria-label="21"></a>        <span class="st">"ci_upper"</span>: trial.ci_upper_q_time_nurse,</span>
-<span id="cb26-22"><a href="" aria-label="22"></a>        <span class="st">"cost"</span>: trial.total_nurse_cost,</span>
-<span id="cb26-23"><a href="" aria-label="23"></a>        <span class="st">"df"</span>: trial.replication_df,</span>
-<span id="cb26-24"><a href="" aria-label="24"></a>    }</span>
-<span id="cb26-25"><a href="" aria-label="25"></a></span>
-<span id="cb26-26"><a href="" aria-label="26"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
-<span id="cb26-27"><a href="" aria-label="27"></a>    st.write(<span class="ss">f"""</span></span>
-<span id="cb26-28"><a href="" aria-label="28"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
-<span id="cb26-29"><a href="" aria-label="29"></a></span>
-<span id="cb26-30"><a href="" aria-label="30"></a><span class="ss">    * Mean: </span><span class="sc">{</span>results[<span class="st">"mean"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb26-31"><a href="" aria-label="31"></a><span class="ss">    * SD: </span><span class="sc">{</span>results[<span class="st">"sd"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb26-32"><a href="" aria-label="32"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>results[<span class="st">"p90"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb26-33"><a href="" aria-label="33"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>results[<span class="st">"se"</span>]<span class="sc">:.2f}</span></span>
-<span id="cb26-34"><a href="" aria-label="34"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>results[<span class="st">"ci_lower"</span>]<span class="sc">:.2f}</span><span class="ss">, </span><span class="sc">{</span>results[<span class="st">"ci_upper"</span>]<span class="sc">:.2f}</span><span class="ss">) minutes</span></span>
-<span id="cb26-35"><a href="" aria-label="35"></a><span class="ss">    </span></span>
-<span id="cb26-36"><a href="" aria-label="36"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>results[<span class="st">"cost"</span>]<span class="sc">:,.2f}</span></span>
-<span id="cb26-37"><a href="" aria-label="37"></a><span class="ss">    """</span>)</span>
-<span id="cb26-38"><a href="" aria-label="38"></a></span>
-<span id="cb26-39"><a href="" aria-label="39"></a>    st.subheader(<span class="st">"Results from individual replications"</span>)</span>
-<span id="cb26-40"><a href="" aria-label="40"></a>    st.write(</span>
-<span id="cb26-41"><a href="" aria-label="41"></a>        <span class="st">"The chart shows how the mean nurse queue time varies between **individual** replications."</span></span>
-<span id="cb26-42"><a href="" aria-label="42"></a>    )</span>
+<span id="cb26-15"><a href="" aria-label="15"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
+<span id="cb26-16"><a href="" aria-label="16"></a>    st.write(<span class="ss">f"""</span></span>
+<span id="cb26-17"><a href="" aria-label="17"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
+<span id="cb26-18"><a href="" aria-label="18"></a></span>
+<span id="cb26-19"><a href="" aria-label="19"></a><span class="ss">    * Mean: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb26-20"><a href="" aria-label="20"></a><span class="ss">    * SD: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb26-21"><a href="" aria-label="21"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb26-22"><a href="" aria-label="22"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span></span>
+<span id="cb26-23"><a href="" aria-label="23"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">,</span></span>
+<span id="cb26-24"><a href="" aria-label="24"></a><span class="ss">    </span><span class="sc">{</span>trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes.</span></span>
+<span id="cb26-25"><a href="" aria-label="25"></a><span class="ss">    </span></span>
+<span id="cb26-26"><a href="" aria-label="26"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>trial<span class="sc">.</span>total_nurse_cost<span class="sc">:,.2f}</span></span>
+<span id="cb26-27"><a href="" aria-label="27"></a><span class="ss">    """</span>)</span>
+<span id="cb26-28"><a href="" aria-label="28"></a></span>
+<span id="cb26-29"><a href="" aria-label="29"></a>    st.subheader(<span class="st">"Results from individual replications"</span>)</span>
+<span id="cb26-30"><a href="" aria-label="30"></a>    st.write(</span>
+<span id="cb26-31"><a href="" aria-label="31"></a>        <span class="st">"The chart shows how the mean nurse queue time varies between **individual** replications."</span></span>
+<span id="cb26-32"><a href="" aria-label="32"></a>    )</span>
+<span id="cb26-33"><a href="" aria-label="33"></a></span>
+<span id="cb26-34"><a href="" aria-label="34"></a>    fig <span class="op">=</span> px.histogram(</span>
+<span id="cb26-35"><a href="" aria-label="35"></a>        data_frame<span class="op">=</span>trial.replication_df,</span>
+<span id="cb26-36"><a href="" aria-label="36"></a>        x<span class="op">=</span><span class="st">"mean_q_time_nurse"</span>,</span>
+<span id="cb26-37"><a href="" aria-label="37"></a>    )</span>
+<span id="cb26-38"><a href="" aria-label="38"></a>    fig.update_layout(</span>
+<span id="cb26-39"><a href="" aria-label="39"></a>        xaxis_title<span class="op">=</span><span class="st">"Mean nurse queue time"</span>,</span>
+<span id="cb26-40"><a href="" aria-label="40"></a>        yaxis_title<span class="op">=</span><span class="st">"Number of replications"</span></span>
+<span id="cb26-41"><a href="" aria-label="41"></a>    )</span>
+<span id="cb26-42"><a href="" aria-label="42"></a>    st.plotly_chart(fig)</span>
 <span id="cb26-43"><a href="" aria-label="43"></a></span>
-<span id="cb26-44"><a href="" aria-label="44"></a>    fig <span class="op">=</span> px.histogram(</span>
-<span id="cb26-45"><a href="" aria-label="45"></a>        data_frame<span class="op">=</span>results[<span class="st">"df"</span>],</span>
-<span id="cb26-46"><a href="" aria-label="46"></a>        x<span class="op">=</span><span class="st">"mean_q_time_nurse"</span>,</span>
-<span id="cb26-47"><a href="" aria-label="47"></a>        labels<span class="op">=</span>{<span class="st">"mean_q_time_nurse"</span>: <span class="st">"Mean nurse queue time"</span>},</span>
-<span id="cb26-48"><a href="" aria-label="48"></a>    )</span>
-<span id="cb26-49"><a href="" aria-label="49"></a>    fig.update_layout(yaxis_title<span class="op">=</span><span class="st">"Number of replications"</span>)</span>
-<span id="cb26-50"><a href="" aria-label="50"></a>    st.plotly_chart(fig)</span>
-<span id="cb26-51"><a href="" aria-label="51"></a></span>
-<span id="cb26-52"><a href="" aria-label="52"></a>    st.dataframe(</span>
-<span id="cb26-53"><a href="" aria-label="53"></a>        results[<span class="st">"df"</span>][</span>
-<span id="cb26-54"><a href="" aria-label="54"></a>            [</span>
-<span id="cb26-55"><a href="" aria-label="55"></a>                <span class="st">"replication_id"</span>,</span>
-<span id="cb26-56"><a href="" aria-label="56"></a>                <span class="st">"patient_counter"</span>,</span>
-<span id="cb26-57"><a href="" aria-label="57"></a>                <span class="st">"mean_q_time_nurse"</span>,</span>
-<span id="cb26-58"><a href="" aria-label="58"></a>                <span class="st">"sd_q_time_nurse"</span>,</span>
-<span id="cb26-59"><a href="" aria-label="59"></a>                <span class="st">"perc_90_q_time_nurse"</span>,</span>
-<span id="cb26-60"><a href="" aria-label="60"></a>            ]</span>
-<span id="cb26-61"><a href="" aria-label="61"></a>        ]</span>
-<span id="cb26-62"><a href="" aria-label="62"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb26-44"><a href="" aria-label="44"></a>    st.dataframe(</span>
+<span id="cb26-45"><a href="" aria-label="45"></a>        trial.replication_df[</span>
+<span id="cb26-46"><a href="" aria-label="46"></a>            [</span>
+<span id="cb26-47"><a href="" aria-label="47"></a>                <span class="st">"replication_id"</span>,</span>
+<span id="cb26-48"><a href="" aria-label="48"></a>                <span class="st">"patient_counter"</span>,</span>
+<span id="cb26-49"><a href="" aria-label="49"></a>                <span class="st">"mean_q_time_nurse"</span>,</span>
+<span id="cb26-50"><a href="" aria-label="50"></a>                <span class="st">"sd_q_time_nurse"</span>,</span>
+<span id="cb26-51"><a href="" aria-label="51"></a>                <span class="st">"perc_90_q_time_nurse"</span>,</span>
+<span id="cb26-52"><a href="" aria-label="52"></a>            ]</span>
+<span id="cb26-53"><a href="" aria-label="53"></a>        ]</span>
+<span id="cb26-54"><a href="" aria-label="54"></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="improving-layout-st.container" class="slide level2">
 <h2>Improving layout: <code>st.container</code></h2>
@@ -1323,55 +1299,47 @@ For this app, we’ll include all everything in <code>Param</code>.</p>
 <span id="cb28-12"><a href="" aria-label="12"></a>    trial.run_trial()</span>
 <span id="cb28-13"><a href="" aria-label="13"></a>    trial.calculate_trial_results()</span>
 <span id="cb28-14"><a href="" aria-label="14"></a></span>
-<span id="cb28-15"><a href="" aria-label="15"></a>    results <span class="op">=</span> {</span>
-<span id="cb28-16"><a href="" aria-label="16"></a>        <span class="st">"mean"</span>: trial.trial_mean_q_time_nurse,</span>
-<span id="cb28-17"><a href="" aria-label="17"></a>        <span class="st">"sd"</span>: trial.trial_sd_q_time_nurse,</span>
-<span id="cb28-18"><a href="" aria-label="18"></a>        <span class="st">"p90"</span>: trial.trial_perc_90_q_time_nurse,</span>
-<span id="cb28-19"><a href="" aria-label="19"></a>        <span class="st">"se"</span>: trial.se_q_time_nurse,</span>
-<span id="cb28-20"><a href="" aria-label="20"></a>        <span class="st">"ci_lower"</span>: trial.ci_lower_q_time_nurse,</span>
-<span id="cb28-21"><a href="" aria-label="21"></a>        <span class="st">"ci_upper"</span>: trial.ci_upper_q_time_nurse,</span>
-<span id="cb28-22"><a href="" aria-label="22"></a>        <span class="st">"cost"</span>: trial.total_nurse_cost,</span>
-<span id="cb28-23"><a href="" aria-label="23"></a>        <span class="st">"df"</span>: trial.replication_df,</span>
-<span id="cb28-24"><a href="" aria-label="24"></a>    }</span>
-<span id="cb28-25"><a href="" aria-label="25"></a></span>
-<span id="cb28-26"><a href="" aria-label="26"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
-<span id="cb28-27"><a href="" aria-label="27"></a>    st.write(<span class="ss">f"""</span></span>
-<span id="cb28-28"><a href="" aria-label="28"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
-<span id="cb28-29"><a href="" aria-label="29"></a></span>
-<span id="cb28-30"><a href="" aria-label="30"></a><span class="ss">    * Mean: </span><span class="sc">{</span>results[<span class="st">"mean"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb28-31"><a href="" aria-label="31"></a><span class="ss">    * SD: </span><span class="sc">{</span>results[<span class="st">"sd"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb28-32"><a href="" aria-label="32"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>results[<span class="st">"p90"</span>]<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
-<span id="cb28-33"><a href="" aria-label="33"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>results[<span class="st">"se"</span>]<span class="sc">:.2f}</span></span>
-<span id="cb28-34"><a href="" aria-label="34"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>results[<span class="st">"ci_lower"</span>]<span class="sc">:.2f}</span><span class="ss">, </span><span class="sc">{</span>results[<span class="st">"ci_upper"</span>]<span class="sc">:.2f}</span><span class="ss">) minutes</span></span>
-<span id="cb28-35"><a href="" aria-label="35"></a><span class="ss">    </span></span>
-<span id="cb28-36"><a href="" aria-label="36"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>results[<span class="st">"cost"</span>]<span class="sc">:,.2f}</span></span>
-<span id="cb28-37"><a href="" aria-label="37"></a><span class="ss">    """</span>)</span>
-<span id="cb28-38"><a href="" aria-label="38"></a></span>
-<span id="cb28-39"><a href="" aria-label="39"></a>    st.subheader(<span class="st">"Results from individual replications"</span>)</span>
-<span id="cb28-40"><a href="" aria-label="40"></a>    st.write(</span>
-<span id="cb28-41"><a href="" aria-label="41"></a>        <span class="st">"The chart shows how the mean nurse queue time varies between **individual** replications."</span></span>
-<span id="cb28-42"><a href="" aria-label="42"></a>    )</span>
+<span id="cb28-15"><a href="" aria-label="15"></a>    st.subheader(<span class="st">"Scenario summary"</span>)</span>
+<span id="cb28-16"><a href="" aria-label="16"></a>    st.write(<span class="ss">f"""</span></span>
+<span id="cb28-17"><a href="" aria-label="17"></a><span class="ss">    Summary of nurse queue times across **all** replications.</span></span>
+<span id="cb28-18"><a href="" aria-label="18"></a></span>
+<span id="cb28-19"><a href="" aria-label="19"></a><span class="ss">    * Mean: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_mean_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb28-20"><a href="" aria-label="20"></a><span class="ss">    * SD: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_sd_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb28-21"><a href="" aria-label="21"></a><span class="ss">    * 90th Perc: </span><span class="sc">{</span>trial<span class="sc">.</span>trial_perc_90_q_time_nurse<span class="sc">:.2f}</span><span class="ss"> minutes.</span></span>
+<span id="cb28-22"><a href="" aria-label="22"></a><span class="ss">    * Standard error: </span><span class="sc">{</span>trial<span class="sc">.</span>se_q_time_nurse<span class="sc">:.2f}</span></span>
+<span id="cb28-23"><a href="" aria-label="23"></a><span class="ss">    * 95% CI: (</span><span class="sc">{</span>trial<span class="sc">.</span>ci_lower_q_time_nurse<span class="sc">:.2f}</span><span class="ss">,</span></span>
+<span id="cb28-24"><a href="" aria-label="24"></a><span class="ss">    </span><span class="sc">{</span>trial<span class="sc">.</span>ci_upper_q_time_nurse<span class="sc">:.2f}</span><span class="ss">) minutes.</span></span>
+<span id="cb28-25"><a href="" aria-label="25"></a><span class="ss">    </span></span>
+<span id="cb28-26"><a href="" aria-label="26"></a><span class="ss">    Total nurse staffing cost: £</span><span class="sc">{</span>trial<span class="sc">.</span>total_nurse_cost<span class="sc">:,.2f}</span></span>
+<span id="cb28-27"><a href="" aria-label="27"></a><span class="ss">    """</span>)</span>
+<span id="cb28-28"><a href="" aria-label="28"></a></span>
+<span id="cb28-29"><a href="" aria-label="29"></a>    st.subheader(<span class="st">"Results from individual replications"</span>)</span>
+<span id="cb28-30"><a href="" aria-label="30"></a>    st.write(</span>
+<span id="cb28-31"><a href="" aria-label="31"></a>        <span class="st">"The chart shows how the mean nurse queue time varies between **individual** replications."</span></span>
+<span id="cb28-32"><a href="" aria-label="32"></a>    )</span>
+<span id="cb28-33"><a href="" aria-label="33"></a></span>
+<span id="cb28-34"><a href="" aria-label="34"></a>    fig <span class="op">=</span> px.histogram(</span>
+<span id="cb28-35"><a href="" aria-label="35"></a>        data_frame<span class="op">=</span>trial.replication_df,</span>
+<span id="cb28-36"><a href="" aria-label="36"></a>        x<span class="op">=</span><span class="st">"mean_q_time_nurse"</span>,</span>
+<span id="cb28-37"><a href="" aria-label="37"></a>    )</span>
+<span id="cb28-38"><a href="" aria-label="38"></a>    fig.update_layout(</span>
+<span id="cb28-39"><a href="" aria-label="39"></a>        xaxis_title<span class="op">=</span><span class="st">"Mean nurse queue time"</span>,</span>
+<span id="cb28-40"><a href="" aria-label="40"></a>        yaxis_title<span class="op">=</span><span class="st">"Number of replications"</span></span>
+<span id="cb28-41"><a href="" aria-label="41"></a>    )</span>
+<span id="cb28-42"><a href="" aria-label="42"></a>    st.plotly_chart(fig)</span>
 <span id="cb28-43"><a href="" aria-label="43"></a></span>
-<span id="cb28-44"><a href="" aria-label="44"></a>    fig <span class="op">=</span> px.histogram(</span>
-<span id="cb28-45"><a href="" aria-label="45"></a>        data_frame<span class="op">=</span>results[<span class="st">"df"</span>],</span>
-<span id="cb28-46"><a href="" aria-label="46"></a>        x<span class="op">=</span><span class="st">"mean_q_time_nurse"</span>,</span>
-<span id="cb28-47"><a href="" aria-label="47"></a>        labels<span class="op">=</span>{<span class="st">"mean_q_time_nurse"</span>: <span class="st">"Mean nurse queue time"</span>},</span>
-<span id="cb28-48"><a href="" aria-label="48"></a>    )</span>
-<span id="cb28-49"><a href="" aria-label="49"></a>    fig.update_layout(yaxis_title<span class="op">=</span><span class="st">"Number of replications"</span>)</span>
-<span id="cb28-50"><a href="" aria-label="50"></a>    st.plotly_chart(fig)</span>
-<span id="cb28-51"><a href="" aria-label="51"></a></span>
-<span id="cb28-52"><a href="" aria-label="52"></a>    <span class="cf">with</span> st.expander(<span class="st">"View underlying data from each replication"</span>):</span>
-<span id="cb28-53"><a href="" aria-label="53"></a>        st.dataframe(</span>
-<span id="cb28-54"><a href="" aria-label="54"></a>            results[<span class="st">"df"</span>][</span>
-<span id="cb28-55"><a href="" aria-label="55"></a>                [</span>
-<span id="cb28-56"><a href="" aria-label="56"></a>                    <span class="st">"replication_id"</span>,</span>
-<span id="cb28-57"><a href="" aria-label="57"></a>                    <span class="st">"patient_counter"</span>,</span>
-<span id="cb28-58"><a href="" aria-label="58"></a>                    <span class="st">"mean_q_time_nurse"</span>,</span>
-<span id="cb28-59"><a href="" aria-label="59"></a>                    <span class="st">"sd_q_time_nurse"</span>,</span>
-<span id="cb28-60"><a href="" aria-label="60"></a>                    <span class="st">"perc_90_q_time_nurse"</span>,</span>
-<span id="cb28-61"><a href="" aria-label="61"></a>                ]</span>
-<span id="cb28-62"><a href="" aria-label="62"></a>            ]</span>
-<span id="cb28-63"><a href="" aria-label="63"></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb28-44"><a href="" aria-label="44"></a>    <span class="cf">with</span> st.expander(<span class="st">"View underlying data from each replication"</span>):</span>
+<span id="cb28-45"><a href="" aria-label="45"></a>        st.dataframe(</span>
+<span id="cb28-46"><a href="" aria-label="46"></a>            trial.replication_df[</span>
+<span id="cb28-47"><a href="" aria-label="47"></a>                [</span>
+<span id="cb28-48"><a href="" aria-label="48"></a>                    <span class="st">"replication_id"</span>,</span>
+<span id="cb28-49"><a href="" aria-label="49"></a>                    <span class="st">"patient_counter"</span>,</span>
+<span id="cb28-50"><a href="" aria-label="50"></a>                    <span class="st">"mean_q_time_nurse"</span>,</span>
+<span id="cb28-51"><a href="" aria-label="51"></a>                    <span class="st">"sd_q_time_nurse"</span>,</span>
+<span id="cb28-52"><a href="" aria-label="52"></a>                    <span class="st">"perc_90_q_time_nurse"</span>,</span>
+<span id="cb28-53"><a href="" aria-label="53"></a>                ]</span>
+<span id="cb28-54"><a href="" aria-label="54"></a>            ]</span>
+<span id="cb28-55"><a href="" aria-label="55"></a>        )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="improving-layout-st.space" class="slide level2">
