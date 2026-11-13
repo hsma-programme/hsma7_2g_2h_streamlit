@@ -6,6 +6,7 @@ metadata-files:
   - template/slides.yml
 filters:
   - whitphx/stlite
+  - bergam0t/value-box
 ---
 
 ##
@@ -192,9 +193,28 @@ We can give our DES model an interface so people can:
 
 ## Other web app tools
 
-TODO
+
+:::: {.columns}
+
+::: {.column}
+
+There are several other tools for creating interactive apps in Python.
+
+<br>
+
+We're using **Streamlit** because it runs top-to-bottom in a script-based approach, similar to the Python code we're already writing.
+
+It is widely used and in very active development.
+
+:::
+
+::: {.column}
 
 ![](images/star-history-apps.png){height=450px}
+
+:::
+
+::::
 
 
 
@@ -990,6 +1010,8 @@ Indent the code for the elements you want inside the container.
 ::::
 
 
+TODO: Show screenshots with and without container?
+OR: Have another app preview before? Ideally not...
 
 
 ## Improving layout: `st.expander`
@@ -1032,7 +1054,7 @@ Set `size` to adjust the spacing. The default is `"small"`.
 ::: {.column width="70%"}
 
 ```{.python code-line-numbers="47,91,105"}
-{{< include code/simple/fullapp.py >}}
+{{< include ../app/singlepage/app.py >}}
 ```
 
 :::
@@ -1041,7 +1063,8 @@ Set `size` to adjust the spacing. The default is `"small"`.
 
 
 
-## Our app
+
+## Our app (via Streamlit Community Cloud)
 
 <iframe
   src="https://hsma-des-simple.streamlit.app/?embed=true"
@@ -1051,20 +1074,59 @@ Set `size` to adjust the spacing. The default is `"small"`.
 
 
 
+## Our app (via stlite)
+
+<a href="https://hsma-programme.github.io/hsma7_2g_streamlit_part1/app/singlepage/" target="_blank">View app in new tab</a>
+
+
+
+
 ## Exercise
 
-Now it's your turn to build a Streamlit app! You have been provided two scripts:
+Now it's your turn to build a Streamlit app!
 
-* `model.py` - the simulation model. You shouldn't need to change this.
-* `analysis.py` - code to run the model and analyse the results. Adapt this code for your app.
+You have been provided `model.py`. This is a simple multi-step branching model with a Trial class - the same model from module 2F (vidigi module) (exercise 2).
 
-<br>
+You shouldn't need to make any changes to this file.
+
+![](../exercises/model_diagram.drawio.png)
+
+
+
+
+## Exercise
+
+:::: {.columns}
+
+::: {.column width="50%"}
 
 Create an `app.py` script and work through these steps:
 
 1. Add input widgets so users can choose the model parameters.
-2. Add a button to run the model with their chosen inputs.
-3. Display the analysis and results.
+1. Add a button to run the model with their chosen inputs.
+1. Display the results (using code from `analysis.py`).
+
+:::
+
+::: {.column width="50%"}
+
+::: {.value-box icon="fa-solid fa-clock" icon-position="left" icon-size="2em" min-height="60px" width="50%" align="right"}
+?? minutes <br>+ ?? minute break
+:::
+
+::: {style="font-size: 80%"}
+
+### Extensions
+
+* Add `st.spinner()` to show when the simulation is running. If your simulation is too quick to show it, you can add `from time import sleep; sleep(3)`.
+* Add code from vidigi module to generate animation (this is the model from exercise 2 of that module). Show it in the app.
+* Instead of printing the summary of times mean/sd/90thperc/se/ci etc., try using `st.metric` to display the results.
+
+:::
+
+:::
+
+::::
 
 
 
@@ -1125,12 +1187,19 @@ Now let's turn it into a multipage app by adding a homepage. This should:
 
 
 
-## Our app
+## Our app (via Streamlit Community Cloud)
 
 <iframe
   src="https://hsma-des-multipage.streamlit.app/?embed=true"
   style="width: 100%; flex: 1; min-height: 0; border: 0;"
 ></iframe>
+
+
+
+
+## Our app (via stlite)
+
+<a href="https://hsma-programme.github.io/hsma7_2g_streamlit_part1/app/multipage/" target="_blank">View app in new tab</a>
 
 
 
@@ -1146,7 +1215,16 @@ TODO: Explain what it is
 
 ## Deploying on Community Cloud
 
-1. Sign in with GitHub at <https://streamlit.io/cloud>.
+1. Add a `requirements.txt` file.
+
+TODO
+
+
+
+
+## Deploying on Community Cloud
+
+2. Sign in with GitHub at <https://streamlit.io/cloud>.
 
 ![](images/cloud_signin.png){height=400px}
 
@@ -1155,7 +1233,7 @@ TODO: Explain what it is
 
 ## Deploying on Community Cloud
 
-2. In top right corner, click "Create app" then choose "Deploy a public app from GitHub".
+3. In top right corner, click "Create app" then choose "Deploy a public app from GitHub".
 
 ![](images/cloud_github.png)
 
@@ -1164,7 +1242,7 @@ TODO: Explain what it is
 
 ## Deploying on Community Cloud
 
-3. Enter details for the app you want to deploy.
+4. Enter details for the app you want to deploy.
 
 ![](images/cloud_details.png){height=450px}
 
@@ -1176,7 +1254,6 @@ TODO: Explain what it is
 
 TODO
 
-Remember env etc.
 
 
 
@@ -1186,3 +1263,5 @@ Remember env etc.
 **Task 1:** Add a homepage to the app you created in the last exercise.
 
 **Task 2:** Deploy your app on Streamlit Community Cloud.
+
+TODO: Time
