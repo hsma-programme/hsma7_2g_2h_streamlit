@@ -11,7 +11,7 @@ import pandas as pd
 import simpy
 from scipy import stats
 from sim_tools.distributions import Exponential, Lognormal
-from vidigi.logging import EventLogger
+from vidigi.logging import EventLogger, TrialLogger
 from vidigi.resources import VidigiStore
 
 
@@ -63,7 +63,10 @@ class Model:
         self.env = simpy.Environment()
         self.patient_counter = 0
 
-        self.logger = EventLogger(env=self.env)
+        self.logger = EventLogger(
+            env=self.env,
+            run_number=self.replication_id
+        )
 
         self.receptionist = VidigiStore(
             self.env,
@@ -226,6 +229,8 @@ class Trial:
         self.ci_upper_q_time_specialist = pd.NA
         self.se_q_time_specialist = pd.NA
 
+        self.trial_logger = TrialLogger()
+
     def run_trial(self):
         for replication_id in range(self.param.num_replications):
             model_replication = Model(self.param, replication_id)
@@ -235,6 +240,8 @@ class Trial:
             )
             model_replication.calculate_run_results(patient_df)
             self.list_of_simulation_replications.append(model_replication)
+
+            self.trial_logger.add_log(model_replication.logger)
 
     def calculate_trial_results(self):
         self.replication_df = pd.DataFrame(
