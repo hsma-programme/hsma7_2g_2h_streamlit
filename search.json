@@ -46,7 +46,7 @@
     "href": "slides/index.html#other-web-app-tools",
     "title": "",
     "section": "Other web app tools",
-    "text": "Other web app tools\nTODO"
+    "text": "Other web app tools\n\n\nThere are several other tools for creating interactive apps in Python.\n\nWe’re using Streamlit because it runs top-to-bottom in a script-based approach, similar to the Python code we’re already writing.\nIt is widely used and in very active development."
   },
   {
     "objectID": "slides/index.html#des-app-showcase-acute-medical-unit",
@@ -277,7 +277,7 @@
     "href": "slides/index.html#improving-layout-st.container",
     "title": "",
     "section": "Improving layout: st.container",
-    "text": "Improving layout: st.container\n\n\nWe can group elements using st.container().\nLet’s add a border around our model parameters using with st.container(border=True):.\nIndent the code for the elements you want inside the container.\n\nwith st.container(border=True):\n    st.subheader(\"Patients\")\n\n    st.slider(\n        label=\"Mean patient inter-arrival time (minutes)\",\n        min_value=3.0,\n        max_value=7.0,\n        value=5.0,\n        step=0.25,\n        key=\"mean_patient_inter\",\n    )\n\n    st.subheader(\"Nurses\")\n\n    st.number_input(\n        label=\"Mean nurse consultation length (minutes)\",\n        min_value=3.0,\n        max_value=9.0,\n        value=6.0,\n        key=\"mean_nurse_consult_time\",\n    )\n\n    st.number_input(\n        label=\"Standard deviation of nurse consultation length (minutes)\",\n        min_value=0.0,\n        value=1.0,\n        key=\"sd_nurse_consult_time\",\n    )\n\n    st.pills(label=\"Number of nurses\", options=range(1, 5), default=1, key=\"num_nurses\")\n\n    st.number_input(\n        label=\"Cost per nurse per hour (£)\",\n        min_value=0.0,\n        value=30.0,\n        step=1.0,\n        key=\"nurse_cost_per_hour\",\n        help=\"Nurses are costed for the full simulation duration, including time when they are not seeing patients\",\n    )\n\n    st.space(size=\"xxsmall\")\n    st.subheader(\"Simulation\")\n\n    st.slider(\n        label=\"Simulation duration (minutes)\",\n        min_value=50,\n        max_value=200,\n        value=120,\n        key=\"sim_duration\",\n    )\n\n    st.slider(\n        label=\"Number of replications\",\n        min_value=10,\n        max_value=50,\n        value=30,\n        key=\"num_replications\",\n    )"
+    "text": "Improving layout: st.container\n\n\nWe can group elements using st.container().\nLet’s add a border around our model parameters using with st.container(border=True):.\nIndent the code for the elements you want inside the container.\n\nwith st.container(border=True):\n    st.subheader(\"Patients\")\n\n    st.slider(\n        label=\"Mean patient inter-arrival time (minutes)\",\n        min_value=3.0,\n        max_value=7.0,\n        value=5.0,\n        step=0.25,\n        key=\"mean_patient_inter\",\n    )\n\n    st.subheader(\"Nurses\")\n\n    st.number_input(\n        label=\"Mean nurse consultation length (minutes)\",\n        min_value=3.0,\n        max_value=9.0,\n        value=6.0,\n        key=\"mean_nurse_consult_time\",\n    )\n\n    st.number_input(\n        label=\"Standard deviation of nurse consultation length (minutes)\",\n        min_value=0.0,\n        value=1.0,\n        key=\"sd_nurse_consult_time\",\n    )\n\n    st.pills(label=\"Number of nurses\", options=range(1, 5), default=1, key=\"num_nurses\")\n\n    st.number_input(\n        label=\"Cost per nurse per hour (£)\",\n        min_value=0.0,\n        value=30.0,\n        step=1.0,\n        key=\"nurse_cost_per_hour\",\n        help=\"Nurses are costed for the full simulation duration, including time when they are not seeing patients\",\n    )\n\n    st.space(size=\"xxsmall\")\n    st.subheader(\"Simulation\")\n\n    st.slider(\n        label=\"Simulation duration (minutes)\",\n        min_value=50,\n        max_value=200,\n        value=120,\n        key=\"sim_duration\",\n    )\n\n    st.slider(\n        label=\"Number of replications\",\n        min_value=10,\n        max_value=50,\n        value=30,\n        key=\"num_replications\",\n    )\n\nTODO: Show screenshots with and without container? OR: Have another app preview before? Ideally not…"
   },
   {
     "objectID": "slides/index.html#improving-layout-st.expander",
@@ -291,21 +291,35 @@
     "href": "slides/index.html#improving-layout-st.space",
     "title": "",
     "section": "Improving layout: st.space",
-    "text": "Improving layout: st.space\n\n\nUse st.space() to add space between sections of the app.\nSet size to adjust the spacing. The default is \"small\".\n\nwith st.container(border=True):\n    st.subheader(\"Patients\")\n\n    st.slider(\n        label=\"Mean patient inter-arrival time (minutes)\",\n        min_value=3.0,\n        max_value=7.0,\n        value=5.0,\n        step=0.25,\n        key=\"mean_patient_inter\",\n    )\n\n    st.subheader(\"Nurses\")\n\n    st.number_input(\n        label=\"Mean nurse consultation length (minutes)\",\n        min_value=3.0,\n        max_value=9.0,\n        value=6.0,\n        key=\"mean_nurse_consult_time\",\n    )\n\n    st.number_input(\n        label=\"Standard deviation of nurse consultation length (minutes)\",\n        min_value=0.0,\n        value=1.0,\n        key=\"sd_nurse_consult_time\",\n    )\n\n    st.pills(label=\"Number of nurses\", options=range(1, 5), default=1, key=\"num_nurses\")\n\n    st.number_input(\n        label=\"Cost per nurse per hour (£)\",\n        min_value=0.0,\n        value=30.0,\n        step=1.0,\n        key=\"nurse_cost_per_hour\",\n        help=\"Nurses are costed for the full simulation duration, including time when they are not seeing patients\",\n    )\n\n    st.space(size=\"xxsmall\")\n    st.subheader(\"Simulation\")\n\n    st.slider(\n        label=\"Simulation duration (minutes)\",\n        min_value=50,\n        max_value=200,\n        value=120,\n        key=\"sim_duration\",\n    )\n\n    st.slider(\n        label=\"Number of replications\",\n        min_value=10,\n        max_value=50,\n        value=30,\n        key=\"num_replications\",\n    )\n\nif st.button(\"Run simulation\", type=\"primary\"):\n    params = Param(\n        mean_patient_inter=st.session_state.mean_patient_inter,\n        mean_nurse_consult_time=st.session_state.mean_nurse_consult_time,\n        sd_nurse_consult_time=st.session_state.sd_nurse_consult_time,\n        num_nurses=st.session_state.num_nurses,\n        sim_duration=st.session_state.sim_duration,\n        num_replications=st.session_state.num_replications,\n        nurse_cost_per_hour=st.session_state.nurse_cost_per_hour,\n    )\n    trial = Trial(param=params)\n    trial.run_trial()\n    trial.calculate_trial_results()\n\n    results = {\n        \"mean\": trial.trial_mean_q_time_nurse,\n        \"sd\": trial.trial_sd_q_time_nurse,\n        \"p90\": trial.trial_perc_90_q_time_nurse,\n        \"se\": trial.se_q_time_nurse,\n        \"ci_lower\": trial.ci_lower_q_time_nurse,\n        \"ci_upper\": trial.ci_upper_q_time_nurse,\n        \"cost\": trial.total_nurse_cost,\n        \"df\": trial.replication_df,\n    }\n\n    st.space()\n    st.subheader(\"Scenario summary\")\n    st.write(f\"\"\"\n    Summary of nurse queue times across **all** replications.\n\n    * Mean: {results[\"mean\"]:.2f} minutes.\n    * SD: {results[\"sd\"]:.2f} minutes.\n    * 90th Perc: {results[\"p90\"]:.2f} minutes.\n    * Standard error: {results[\"se\"]:.2f}\n    * 95% CI: ({results[\"ci_lower\"]:.2f}, {results[\"ci_upper\"]:.2f}) minutes\n    \n    Total nurse staffing cost: £{results[\"cost\"]:,.2f}\n    \"\"\")\n\n    st.space()\n    st.subheader(\"Results from individual replications\")\n    st.write(\n        \"The chart shows how the mean nurse queue time varies between **individual** replications.\"\n    )\n\n    fig = px.histogram(\n        data_frame=results[\"df\"],\n        x=\"mean_q_time_nurse\",\n        labels={\"mean_q_time_nurse\": \"Mean nurse queue time\"},\n    )\n    fig.update_layout(yaxis_title=\"Number of replications\")\n    st.plotly_chart(fig)\n\n    with st.expander(\"View underlying data from each replication\"):\n        st.dataframe(\n            results[\"df\"][\n                [\n                    \"replication_id\",\n                    \"patient_counter\",\n                    \"mean_q_time_nurse\",\n                    \"sd_q_time_nurse\",\n                    \"perc_90_q_time_nurse\",\n                ]\n            ]\n        )"
+    "text": "Improving layout: st.space\n\n\nUse st.space() to add space between sections of the app.\nSet size to adjust the spacing. The default is \"small\".\n\n\"\"\"Simple single-page app.\"\"\"\n\nimport plotly.express as px\nimport streamlit as st\nfrom model import Param, Trial\n\nwith st.container(border=True):\n    st.subheader(\"Patients\")\n\n    st.slider(\n        label=\"Mean patient inter-arrival time (minutes)\",\n        min_value=3.0,\n        max_value=7.0,\n        value=5.0,\n        step=0.25,\n        key=\"mean_patient_inter\",\n    )\n\n    st.subheader(\"Nurses\")\n\n    st.number_input(\n        label=\"Mean nurse consultation length (minutes)\",\n        min_value=3.0,\n        max_value=9.0,\n        value=6.0,\n        key=\"mean_nurse_consult_time\",\n    )\n\n    st.number_input(\n        label=\"Standard deviation of nurse consultation length (minutes)\",\n        min_value=0.0,\n        value=1.0,\n        key=\"sd_nurse_consult_time\",\n    )\n\n    st.pills(label=\"Number of nurses\", options=range(1, 5), default=1, key=\"num_nurses\")\n\n    st.number_input(\n        label=\"Cost per nurse per hour (£)\",\n        min_value=0.0,\n        value=30.0,\n        step=1.0,\n        key=\"nurse_cost_per_hour\",\n        help=\"Nurses are costed for the full simulation duration, including time when they are not seeing patients\",\n    )\n\n    st.space(size=\"xxsmall\")\n    st.subheader(\"Simulation\")\n\n    st.slider(\n        label=\"Simulation duration (minutes)\",\n        min_value=50,\n        max_value=200,\n        value=120,\n        key=\"sim_duration\",\n    )\n\n    st.slider(\n        label=\"Number of replications\",\n        min_value=10,\n        max_value=50,\n        value=30,\n        key=\"num_replications\",\n    )\n\nif st.button(\"Run simulation\", type=\"primary\"):\n    params = Param(\n        mean_patient_inter=st.session_state.mean_patient_inter,\n        mean_nurse_consult_time=st.session_state.mean_nurse_consult_time,\n        sd_nurse_consult_time=st.session_state.sd_nurse_consult_time,\n        num_nurses=st.session_state.num_nurses,\n        sim_duration=st.session_state.sim_duration,\n        num_replications=st.session_state.num_replications,\n        nurse_cost_per_hour=st.session_state.nurse_cost_per_hour,\n    )\n    trial = Trial(param=params)\n    trial.run_trial()\n    trial.calculate_trial_results()\n\n    st.space()\n    st.subheader(\"Scenario summary\")\n    st.write(f\"\"\"\n    Summary of nurse queue times across **all** replications.\n\n    * Mean: {trial.trial_mean_q_time_nurse:.2f} minutes.\n    * SD: {trial.trial_sd_q_time_nurse:.2f} minutes.\n    * 90th Perc: {trial.trial_perc_90_q_time_nurse:.2f} minutes.\n    * Standard error: {trial.se_q_time_nurse:.2f}\n    * 95% CI: ({trial.ci_lower_q_time_nurse:.2f},\n    {trial.ci_upper_q_time_nurse:.2f}) minutes.\n    \n    Total nurse staffing cost: £{trial.total_nurse_cost:,.2f}\n    \"\"\")\n\n    st.space()\n    st.subheader(\"Results from individual replications\")\n    st.write(\n        \"The chart shows how the mean nurse queue time varies between **individual** replications.\"\n    )\n\n    fig = px.histogram(\n        data_frame=trial.replication_df,\n        x=\"mean_q_time_nurse\",\n    )\n    fig.update_layout(\n        xaxis_title=\"Mean nurse queue time\",\n        yaxis_title=\"Number of replications\"\n    )\n    st.plotly_chart(fig)\n\n    with st.expander(\"View underlying data from each replication\"):\n        st.dataframe(\n            trial.replication_df[\n                [\n                    \"replication_id\",\n                    \"patient_counter\",\n                    \"mean_q_time_nurse\",\n                    \"sd_q_time_nurse\",\n                    \"perc_90_q_time_nurse\",\n                ]\n            ]\n        )"
   },
   {
-    "objectID": "slides/index.html#our-app",
-    "href": "slides/index.html#our-app",
+    "objectID": "slides/index.html#our-app-via-streamlit-community-cloud",
+    "href": "slides/index.html#our-app-via-streamlit-community-cloud",
     "title": "",
-    "section": "Our app",
-    "text": "Our app"
+    "section": "Our app (via Streamlit Community Cloud)",
+    "text": "Our app (via Streamlit Community Cloud)"
+  },
+  {
+    "objectID": "slides/index.html#our-app-via-stlite",
+    "href": "slides/index.html#our-app-via-stlite",
+    "title": "",
+    "section": "Our app (via stlite)",
+    "text": "Our app (via stlite)\nView app in new tab"
   },
   {
     "objectID": "slides/index.html#exercise",
     "href": "slides/index.html#exercise",
     "title": "",
     "section": "Exercise",
-    "text": "Exercise\nNow it’s your turn to build a Streamlit app! You have been provided two scripts:\n\nmodel.py - the simulation model. You shouldn’t need to change this.\nanalysis.py - code to run the model and analyse the results. Adapt this code for your app.\n\n\nCreate an app.py script and work through these steps:\n\nAdd input widgets so users can choose the model parameters.\nAdd a button to run the model with their chosen inputs.\nDisplay the analysis and results."
+    "text": "Exercise\nNow it’s your turn to build a Streamlit app!\nYou have been provided model.py. This is a simple multi-step branching model with a Trial class - the same model from module 2F (vidigi module) (exercise 2).\nYou shouldn’t need to make any changes to this file."
+  },
+  {
+    "objectID": "slides/index.html#exercise-1",
+    "href": "slides/index.html#exercise-1",
+    "title": "",
+    "section": "Exercise",
+    "text": "Exercise\n\n\nCreate an app.py script and work through these steps:\n\nAdd input widgets so users can choose the model parameters.\nAdd a button to run the model with their chosen inputs.\nDisplay the results (using code from analysis.py).\n\n\n\n?? minutes + ?? minute break\n\n\nExtensions\n\nAdd st.spinner() to show when the simulation is running. If your simulation is too quick to show it, you can add from time import sleep; sleep(3).\nAdd code from vidigi module to generate animation (this is the model from exercise 2 of that module). Show it in the app.\nInstead of printing the summary of times mean/sd/90thperc/se/ci etc., try using st.metric to display the results."
   },
   {
     "objectID": "slides/index.html#multipage-apps-1",
@@ -329,11 +343,18 @@
     "text": "home.py\nimport streamlit as st\n\nst.title(\"Nurse clinic simulation\")\n\nst.write(\"\"\"\nThis app allows you to run a simple discrete-event simulation (DES) of a nurse\nclinic.\n\nThis is a synthetic model created for the HSMA course. It is from\n[session 2C: Replications, Reproducibility and Multiple Activities]\n(https://docs.google.com/presentation/d/1ZCgLD82pcPGyNPMvpki724URyNudy_CNpLn8\n82V9B1w/edit?usp=sharing).\n\"\"\")\n\nst.image(\"images/model_diagram.drawio.png\")\n\nst.caption(\"\"\"\nModel diagram: patient arrives, waits for an available nurse, has a\nconsultation, then leaves.\n\"\"\")"
   },
   {
-    "objectID": "slides/index.html#our-app-1",
-    "href": "slides/index.html#our-app-1",
+    "objectID": "slides/index.html#our-app-via-streamlit-community-cloud-1",
+    "href": "slides/index.html#our-app-via-streamlit-community-cloud-1",
     "title": "",
-    "section": "Our app",
-    "text": "Our app"
+    "section": "Our app (via Streamlit Community Cloud)",
+    "text": "Our app (via Streamlit Community Cloud)"
+  },
+  {
+    "objectID": "slides/index.html#our-app-via-stlite-1",
+    "href": "slides/index.html#our-app-via-stlite-1",
+    "title": "",
+    "section": "Our app (via stlite)",
+    "text": "Our app (via stlite)\nView app in new tab"
   },
   {
     "objectID": "slides/index.html#streamlit-community-cloud",
@@ -347,35 +368,42 @@
     "href": "slides/index.html#deploying-on-community-cloud",
     "title": "",
     "section": "Deploying on Community Cloud",
-    "text": "Deploying on Community Cloud\n\nSign in with GitHub at https://streamlit.io/cloud."
+    "text": "Deploying on Community Cloud\n\nAdd a requirements.txt file.\n\nTODO"
   },
   {
     "objectID": "slides/index.html#deploying-on-community-cloud-1",
     "href": "slides/index.html#deploying-on-community-cloud-1",
     "title": "",
     "section": "Deploying on Community Cloud",
-    "text": "Deploying on Community Cloud\n\nIn top right corner, click “Create app” then choose “Deploy a public app from GitHub”."
+    "text": "Deploying on Community Cloud\n\nSign in with GitHub at https://streamlit.io/cloud."
   },
   {
     "objectID": "slides/index.html#deploying-on-community-cloud-2",
     "href": "slides/index.html#deploying-on-community-cloud-2",
     "title": "",
     "section": "Deploying on Community Cloud",
-    "text": "Deploying on Community Cloud\n\nEnter details for the app you want to deploy."
+    "text": "Deploying on Community Cloud\n\nIn top right corner, click “Create app” then choose “Deploy a public app from GitHub”."
   },
   {
     "objectID": "slides/index.html#deploying-on-community-cloud-3",
     "href": "slides/index.html#deploying-on-community-cloud-3",
     "title": "",
     "section": "Deploying on Community Cloud",
-    "text": "Deploying on Community Cloud\nTODO\nRemember env etc."
+    "text": "Deploying on Community Cloud\n\nEnter details for the app you want to deploy."
   },
   {
-    "objectID": "slides/index.html#exercise-1",
-    "href": "slides/index.html#exercise-1",
+    "objectID": "slides/index.html#deploying-on-community-cloud-4",
+    "href": "slides/index.html#deploying-on-community-cloud-4",
+    "title": "",
+    "section": "Deploying on Community Cloud",
+    "text": "Deploying on Community Cloud\nTODO"
+  },
+  {
+    "objectID": "slides/index.html#exercise-2",
+    "href": "slides/index.html#exercise-2",
     "title": "",
     "section": "Exercise",
-    "text": "Exercise\nTask 1: Add a homepage to the app you created in the last exercise.\nTask 2: Deploy your app on Streamlit Community Cloud."
+    "text": "Exercise\nTask 1: Add a homepage to the app you created in the last exercise.\nTask 2: Deploy your app on Streamlit Community Cloud.\nTODO: Time"
   },
   {
     "objectID": "index.html",
