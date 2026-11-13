@@ -231,13 +231,6 @@
     "text": "Inputs: Simulation\n\n\nst.slider(\n    label=\"Simulation duration (minutes)\",\n    min_value=50,\n    max_value=200,\n    value=120,\n    key=\"sim_duration\",\n)\n\nst.slider(\n    label=\"Number of replications\",\n    min_value=10,\n    max_value=50,\n    value=30,\n    key=\"num_replications\",\n)"
   },
   {
-    "objectID": "slides/index.html#complete-set-of-user-inputs-for-the-app",
-    "href": "slides/index.html#complete-set-of-user-inputs-for-the-app",
-    "title": "",
-    "section": "Complete set of user inputs for the app",
-    "text": "Complete set of user inputs for the app\n\n\nst.subheader(\"Patients\")\n\nst.slider(\n    label=\"Mean patient inter-arrival time (minutes)\",\n    min_value=3.0,\n    max_value=7.0,\n    value=5.0,\n    step=0.25,\n    key=\"mean_patient_inter\",\n)\n\nst.subheader(\"Nurses\")\n\nst.number_input(\n    label=\"Mean nurse consultation length (minutes)\",\n    min_value=3.0,\n    max_value=9.0,\n    value=6.0,\n    key=\"mean_nurse_consult_time\",\n)\n\nst.number_input(\n    label=\"Standard deviation of nurse consultation length (minutes)\",\n    min_value=0.0,\n    value=1.0,\n    key=\"sd_nurse_consult_time\",\n)\n\nst.pills(label=\"Number of nurses\", options=range(1, 5), default=1, key=\"num_nurses\")\n\nst.number_input(\n    label=\"Cost per nurse per hour (£)\",\n    min_value=0.0,\n    value=30.0,\n    step=1.0,\n    key=\"nurse_cost_per_hour\",\n    help=\"Nurses are costed for the full simulation duration, including time when they are not seeing patients\",\n)\n\nst.space(size=\"xxsmall\")\nst.subheader(\"Simulation\")\n\nst.slider(\n    label=\"Simulation duration (minutes)\",\n    min_value=50,\n    max_value=200,\n    value=120,\n    key=\"sim_duration\",\n)\n\nst.slider(\n    label=\"Number of replications\",\n    min_value=10,\n    max_value=50,\n    value=30,\n    key=\"num_replications\",\n)"
-  },
-  {
     "objectID": "slides/index.html#run-model-using-the-inputs",
     "href": "slides/index.html#run-model-using-the-inputs",
     "title": "",
