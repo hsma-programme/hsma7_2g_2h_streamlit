@@ -897,37 +897,6 @@ import streamlit as st
 
 
 
-## Complete set of user inputs for the app
-
-:::: {.columns}
-
-::: {.column width="55%"}
-
-```{.python}
-{{< include code/simple/inputs.py >}}
-```
-
-:::
-
-::: {.column width="45%"}
-
-::: {style="height: 550px;"}
-
-```{stlite-python}
-import streamlit as st
-
-{{< include code/simple/inputs.py >}}
-```
-
-:::
-
-:::
-
-::::
-
-
-
-
 ## Run model using the inputs
 
 Now we want to run the model in our app, using the selected values instead of relying on the model's defaults.
