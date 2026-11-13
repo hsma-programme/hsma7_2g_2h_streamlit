@@ -1,6 +1,7 @@
 """Home page introducing the nurse clinic simulation."""
 
 from pathlib import Path
+
 import streamlit as st
 
 st.title("Nurse clinic simulation")
