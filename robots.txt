@@ -1,0 +1,1 @@
+Sitemap: https://hsma-programme.github.io/hsma7_2g_streamlit_part1/sitemap.xml
